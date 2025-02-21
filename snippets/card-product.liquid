@@ -1,3 +1,29 @@
+<script>
+  function addProductFromCollection(id) {
+    let formData = {
+     'items': [{
+      'id': id,
+      'quantity': 1
+      }]
+    };
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(async response => {
+      let final = await response.json()
+      window.location.href = '{{ routes.cart_url }}'
+      return final
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+</script>
+
 {% comment %}
   Renders a product card
 
@@ -568,6 +594,13 @@
       </div>
     </div>
   </div>
+  <div class="collection-add-to-cart" onclick="addProductFromCollection({{ card_product.selected_or_first_available_variant.id }})">
+    <span class="material-symbols-outlined">
+      <span class="material-symbols-outlined">
+      add_shopping_cart
+      </span>
+    </span>
+  </div>
 {%- else -%}
   {%- liquid
     assign ratio = 1
@@ -622,7 +655,3 @@
     </div>
   </div>
 {%- endif -%}
-<form method="post" action="/cart/add">
-    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-    <button type="submit" class="btn">Add to Cart</button>
-</form>
