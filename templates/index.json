@@ -157,12 +157,43 @@
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
+    },
+    "rich_text_J7brPh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Bhfyar": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fuerza, crecimiento y brillo en cada gomitao dia a dia",
+            "heading_size": "h1"
+          }
+        },
+        "text_4fYj8p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Una rutina simple para un cabello más hermoso y saludable todos los días</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Bhfyar",
+        "text_4fYj8p"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main_banner_by_turbo_4HTpEC",
     "multicolumn_Wm9TCi",
     "featured_collection",
-    "image_banner_Gk8aLd"
+    "image_banner_Gk8aLd",
+    "rich_text_J7brPh"
   ]
 }
