@@ -4,16 +4,16 @@
 
 <style>
   .slideshow__media {
-    display: none !important;
+    display: none;
   }
   @media (min-width:767px) {
-    #Slider--{{ section.id }} .slideshow__media{
-      display:block;
+    #Slider--{{ section.id }} .slideshow__media.desktop{
+      display:block !important;
     }
   }
   @media (max-width:766px) {
     #Slider--{{ section.id }} .slideshow__media.mobile{
-      display:block;
+      display:block !important;
     }
   }
 </style>
