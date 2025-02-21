@@ -1,61 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "main_banner_by_turbo_4HTpEC": {
+      "type": "main-banner-by-turbo",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_MBbjNn": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/E-BANNER__SLIDE_V4.png",
+            "image-mob": "shopify://shop_images/Frame_1000006875.png",
+            "image_link": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_MBbjNn"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "multicolumn_Wm9TCi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_94wtHc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006237.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AqA8LC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006240.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_r8XCgP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006238.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GFaYfG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006239.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_94wtHc",
+        "column_AqA8LC",
+        "column_r8XCgP",
+        "column_GFaYfG"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "collection": "productos",
+        "products_to_show": 3,
+        "columns_desktop": 3,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -63,13 +137,69 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_Gk8aLd": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Frame_1261153344.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text_J7brPh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Bhfyar": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fuerza, crecimiento y brillo en cada gomitao dia a dia",
+            "heading_size": "h1"
+          }
+        },
+        "text_4fYj8p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Una rutina simple para un cabello más hermoso y saludable todos los días</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Bhfyar",
+        "text_4fYj8p"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {width: 100%; min-width: 100%;}",
+        ".rich-text__blocks {display: flex; align-items: center; max-width: 100%; gap: 3rem;}",
+        ".rich-text__heading {font-size: 56px; letter-spacing: 1.12px; color: #272727;}",
+        ".rich-text__text * {font-size: 30px; color: #242323;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "main_banner_by_turbo_4HTpEC",
+    "multicolumn_Wm9TCi",
+    "featured_collection",
+    "image_banner_Gk8aLd",
+    "rich_text_J7brPh"
   ]
 }
