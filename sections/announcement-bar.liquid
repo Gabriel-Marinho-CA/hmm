@@ -10,7 +10,7 @@
     assign language_country_selector = true
   endif
   if section.blocks.size > 0
-    assign announcement_bar = true
+    assign announcement_bar = true 
   endif
 -%}
 
@@ -245,7 +245,7 @@
       "name": "t:sections.announcement-bar.blocks.announcement.name",
       "settings": [
         {
-          "type": "text",
+          "type": "richtext",
           "id": "text",
           "default": "t:sections.announcement-bar.blocks.announcement.settings.text.default",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
@@ -256,7 +256,7 @@
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
         }
       ]
-    }
+    } 
   ],
   "presets": [
     {
