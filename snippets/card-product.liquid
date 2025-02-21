@@ -1,32 +1,44 @@
 <script>
-  function addProductFromCollection(ev,id) {
-
-  ev.preventDefault();
-  ev.stopPropagation();
-
+  function addProductFromCollection(ev, id) {
     let formData = {
-     'items': [{
-      'id': id,
-      'quantity': 1
-      }]
+      items: [
+        {
+          id: id,
+          quantity: 1,
+        },
+      ],
     };
     fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
-    .then(async response => {
-      let final = await response.json()
-      window.location.href = '{{ routes.cart_url }}'
-      return final
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then(async (response) => {
+        let final = await response.json();
+        window.location.href = '{{ routes.cart_url }}';
+        return final;
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }
 </script>
+<style>
+  .buy-btn-card-product {
+    button {
+      height: 56px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width: 100%;
+      border-radius: 32px;
+      background-color: #ff4375;
+      color: #ffff;
+    }
+  }
+</style>
 
 {% comment %}
   Renders a product card
@@ -598,7 +610,11 @@
       </div>
     </div>
   </div>
-    <button onclick="addProductFromCollection(event,{{ card_product.selected_or_first_available_variant.id }})">Comprar</button>
+  <div class="buy-btn-card-product">
+    <button onclick="addProductFromCollection({{ card_product.selected_or_first_available_variant.id }})">
+      Comprar
+    </button>
+  </div>
 {%- else -%}
   {%- liquid
     assign ratio = 1
