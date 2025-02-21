@@ -22,11 +22,11 @@
                 content: "";
                 width: 100%;
                 height: 300px;
-                background: #b368eb;
                 position: absolute;
                 border-radius: 48px 48px 0 0;
                 bottom: 9px;
                 z-index: 0;
+                background: attr(data-bg-color)
             }
 
             img {
@@ -61,12 +61,12 @@
     <ul class="list-custom-cards">
       {% for item in section.blocks %}
         {% if item.type == 'card' %}
-          <li class="card-wrapper" style="background-color: {{ item.settings.bg_color }}">
+          <li class="card-wrapper">
             {% if item.settings.link != blank %}
               <a class="link" href="{{ item.settings.link }}"></a>
             {% endif %}
             {% if item.settings.image != blank %}
-              <div class="image-card">
+              <div class="image-card" data-bg-color="{{ item.settings.bg_color  }}">
                 {{
                   item.settings.image
                   | image_url: width: item.settings.image.width, height: item.settings.image.height
