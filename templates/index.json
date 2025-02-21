@@ -206,10 +206,32 @@
             "title": "<p>Crecimiento acelerado</p>",
             "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
           }
+        },
+        "card_hYArFz": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#b368eb",
+            "link": "",
+            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
+            "title": "<p>Crecimiento acelerado</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
+        },
+        "card_caJKfm": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#b368eb",
+            "link": "shopify://collections/productos",
+            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
+            "title": "<p>Crecimiento acelerado</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
         }
       },
       "block_order": [
-        "card_mt36GV"
+        "card_mt36GV",
+        "card_hYArFz",
+        "card_caJKfm"
       ],
       "settings": {}
     }
