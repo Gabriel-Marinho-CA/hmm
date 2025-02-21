@@ -28,6 +28,8 @@
 <style>
   .buy-btn-card-product {
     button {
+      position: absolute;
+      z-index:3;
       border: none;
       height: 56px;
       display:flex;
@@ -333,6 +335,11 @@
               {% endif %}
             {%- endif -%}
           </div>
+          <div class="buy-btn-card-product">
+            <button onclick="addProductFromCollection({{ card_product.selected_or_first_available_variant.id }})">
+              Comprar
+            </button>
+          </div>
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
         {% if quick_add == 'standard' %}
@@ -613,11 +620,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="buy-btn-card-product">
-    <button onclick="addProductFromCollection({{ card_product.selected_or_first_available_variant.id }})">
-      Comprar
-    </button>
   </div>
 {%- else -%}
   {%- liquid
