@@ -10,27 +10,33 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .section-{{ section.id }}-padding {
+
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <ul class="list-custom-cards">
       {% for item in section.blocks %}
-
         {% if item.type == 'card' %}
           <li class="card-wrapper" style="background-color: {{ item.settings.bg_color }}">
             {% if item.settings.link != blank %}
               <a class="link" href="{{ item.settings.link }}"></a>
             {% endif %}
             {% if item.settings.image != blank %}
-              {{
-                item.settings.image
-                | image_url: width: item.settings.image.width, height: item.settings.image.height
-                | image_tag
-              }}
+              <div class="image-card">
+                {{
+                  item.settings.image
+                  | image_url: width: item.settings.image.width, height: item.settings.image.height
+                  | image_tag
+                }}
+              </div>
             {% endif %}
-            <div class="title">{{ item.settings.title }}</div>
-            <div class="subtitle">{{ item.settings.subtitle }}</div>
+            <div class="info-card">
+                <div class="title-card">{{ item.settings.title }}</div>
+                <div class="subtitle-card">{{ item.settings.subtitle }}</div>
+            </div>
           </li>
         {% endif %}
       {% endfor %}
@@ -81,7 +87,7 @@
   ],
   "presets": [
     {
-        "name":"Card Image List by turbo"
+      "name": "Card Image List by turbo"
     }
   ]
 }
