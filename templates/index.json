@@ -210,7 +210,7 @@
         "card_hYArFz": {
           "type": "card",
           "settings": {
-            "bg_color": "#b368eb",
+            "bg_color": "#b4fa64",
             "link": "",
             "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
             "title": "<p>Crecimiento acelerado</p>",
@@ -220,7 +220,7 @@
         "card_caJKfm": {
           "type": "card",
           "settings": {
-            "bg_color": "#b368eb",
+            "bg_color": "#ff4375",
             "link": "shopify://collections/productos",
             "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
             "title": "<p>Crecimiento acelerado</p>",
