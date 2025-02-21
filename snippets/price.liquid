@@ -70,7 +70,7 @@
                   {% if settings.currency_code_enabled %}
                     {{ compare_at_price | money_with_currency }}
                   {% else %}
-                    {{ compare_at_price | money }}
+                   de {{ compare_at_price | money }}
                   {% endif %}
                 </s>
               </span>
@@ -94,11 +94,11 @@
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
-            <s class="price-item price-item--regular">
+            <s class="price-item price-item--regular list-price">
               {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_with_currency }}
+                 {{ compare_at_price | money_with_currency }}
               {% else %}
-                {{ compare_at_price | money }}
+              de {{ compare_at_price | money }}
               {% endif %}
             </s>
           </span>
