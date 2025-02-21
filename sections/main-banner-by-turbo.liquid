@@ -22,7 +22,10 @@
         display: block;
       }
     }
+  {%- endstyle -%}
+{%- endif -%}
 
+<style>
     #Slider--{{ section.id }} {
       & .slideshow__media.desktop
       & .slideshow__media.mobile {
@@ -40,9 +43,7 @@
         }
       }
     } 
-    
-  {%- endstyle -%}
-{%- endif -%}
+</style>
 
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
