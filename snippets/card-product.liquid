@@ -1,5 +1,5 @@
 <script>
-  function addProductFromCollection(ev, id) {
+  function addProductFromCollection(id) {
     let formData = {
       items: [
         {
@@ -15,10 +15,9 @@
       },
       body: JSON.stringify(formData),
     })
-      .then(async (response) => {
-        let final = await response.json();
+      .then((response) => {
+        console.log("hmm")
         window.location.href = '{{ routes.cart_url }}';
-        return final;
       })
       .catch((error) => {
         console.error('Error:', error);
