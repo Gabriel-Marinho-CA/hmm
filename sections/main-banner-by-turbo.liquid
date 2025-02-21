@@ -26,23 +26,20 @@
 {%- endif -%}
 
 <style>
-    #Slider--{{ section.id }} {
-      & .slideshow__media.desktop
-      & .slideshow__media.mobile {
-        display:none
-      }
-
-      @media (min-width:767px) {
-       & .slideshow__media.desktop {
+    #Slider--{{ section.id }} .slideshow__media.desktop,
+    #Slider--{{ section.id }} .slideshow__media.mobile {
+     display:none
+    }
+  @media (min-width:767px) {
+    #Slider--{{ section.id }} .slideshow__media.desktop{
           display:block;
         }
       }
       @media (max-width:766px) {
-       & .slideshow__media.mobile {
+      #Slider--{{ section.id }} .slideshow__media.mobile{
           display:block;
         }
       }
-    } 
 </style>
 
 <slideshow-component
@@ -465,7 +462,7 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
-        },    
+        },
         {
           "type": "image_picker",
           "id": "image-mob",
