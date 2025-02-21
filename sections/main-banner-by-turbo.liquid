@@ -3,6 +3,9 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 <style>
+  .slideshow__media {
+    display: none !important;
+  }
   @media (min-width:767px) {
     #Slider--{{ section.id }} .slideshow__media{
       display:block;
