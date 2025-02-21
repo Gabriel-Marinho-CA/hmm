@@ -22,6 +22,26 @@
         display: block;
       }
     }
+
+
+    #Slider--{{ section.id }} {
+      .slideshow__media.desktop
+      .slideshow__media.mobile {
+        display:none
+      }
+
+      @media (min-width:767px) {
+        .slideshow__media.desktop {
+          display:block;
+        }
+      }
+      @media (max-width:766px) {
+        .slideshow__media.mobile {
+          display:block;
+        }
+      }
+    } 
+    
   {%- endstyle -%}
 {%- endif -%}
 
