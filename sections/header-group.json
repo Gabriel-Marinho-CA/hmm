@@ -17,14 +17,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "CUPÓN: MENOS10% DE DESCUENTO EN TU PRIMERA COMPRA",
+            "text": "<p>CUPÓN: MENOS10% DE DESCUENTO EN TU PRIMERA COMPRA</p>",
             "link": ""
           }
         },
         "announcement_UHPpQt": {
           "type": "announcement",
           "settings": {
-            "text": "ENVIO PARA TODO O BRASIL",
+            "text": "<p>ENVIO PARA <strong>TODO O BRASIL</strong></p>",
             "link": ""
           }
         }
