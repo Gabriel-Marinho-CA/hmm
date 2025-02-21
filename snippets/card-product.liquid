@@ -1,3 +1,55 @@
+<script>
+  function addProductFromCollection(id) {
+    let formData = {
+      items: [
+        {
+          id: id,
+          quantity: 1,
+        },
+      ],
+    };
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        console.log("hmm")
+        window.location.href = '{{ routes.cart_url }}';
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+</script>
+<style>
+
+  .buy-btn-card-product {
+    margin-top: 1.5rem;
+    position: relative;
+    height:56px;
+    button {
+      top:0;
+      position: absolute;
+      z-index:3;
+      border: none;
+      height: 56px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width: 100%;
+      border-radius: 32px;
+      background-color: #ff4375;
+      color: #ffff;
+      font-size:16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+</style>
+
 {% comment %}
   Renders a product card
 
@@ -286,6 +338,11 @@
                 </quantity-popover>
               {% endif %}
             {%- endif -%}
+          </div>
+          <div class="buy-btn-card-product">
+            <button onclick="addProductFromCollection({{ card_product.selected_or_first_available_variant.id }})">
+              Comprar
+            </button>
           </div>
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}

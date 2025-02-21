@@ -38,6 +38,49 @@
   }
 {%- endstyle -%}
 
+<style>
+    .section-{{ section.id }}-padding {
+      .custom-card-item {
+  padding-inline:.5rem;
+
+    .card-wrapper {
+      background: #fff;
+    padding: 2rem;
+    border-radius: 48px;
+    box-shadow: 0px 4px 24px 0px #00000014;
+    overflow: hidden;
+    height: fit-content;
+      .card__content {
+        margin-top: 24px;
+        .card__heading {
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+        }
+        .price__container {
+          width: 100%;
+
+          .price__sale {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .price-item.list-price {
+              color: #727376;
+              font-size: 18px;
+            }
+            .price-item--sale {
+              font-size:20px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+    }
+</style>
+
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
@@ -98,7 +141,7 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="custom-card-item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"
