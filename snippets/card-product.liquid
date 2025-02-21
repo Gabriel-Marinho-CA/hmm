@@ -622,3 +622,7 @@
     </div>
   </div>
 {%- endif -%}
+<form method="post" action="/cart/add">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <button type="submit" class="btn">Add to Cart</button>
+</form>
