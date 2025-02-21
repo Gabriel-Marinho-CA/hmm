@@ -2,6 +2,19 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
+<style>
+  @media (min-width:767px) {
+    #Slider--{{ section.id }} .slideshow__media{
+      display:block;
+    }
+  }
+  @media (max-width:766px) {
+    #Slider--{{ section.id }} .slideshow__media.mobile{
+      display:block;
+    }
+  }
+</style>
+
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
@@ -24,22 +37,6 @@
     }
   {%- endstyle -%}
 {%- endif -%}
-
-<style>
-    #Slider--{{ section.id }} .slideshow__media.desktop{
-     display:none !important;
-    }
-  @media (min-width:767px) {
-    #Slider--{{ section.id }} .slideshow__media.desktop{
-          display:block;
-        }
-      }
-      @media (max-width:766px) {
-      #Slider--{{ section.id }} .slideshow__media.mobile{
-          display:block;
-        }
-      }
-</style>
 
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
