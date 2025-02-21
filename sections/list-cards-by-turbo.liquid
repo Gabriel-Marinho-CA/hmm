@@ -15,21 +15,22 @@
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <ul class="list-custom-cards">
-      {% for block in section.settings.blocks %}
-        {% if block.type == 'card' %}
-          <li class="card-wrapper" style="background-color: {{ block.settings.bg_color }}">
-            {% if block.settings.link != blank %}
-              <a class="link" href="{{ block.settings.link }}"></a>
+      {% for item in section.settings.blocks %}
+
+        {% if item.type == 'card' %}
+          <li class="card-wrapper" style="background-color: {{ item.settings.bg_color }}">
+            {% if item.settings.link != blank %}
+              <a class="link" href="{{ item.settings.link }}"></a>
             {% endif %}
-            {% if block.settings.image != blank %}
+            {% if item.settings.image != blank %}
               {{
-                block.settings.image
-                | image_url: width: block.settings.image.width, height: block.settings.image.height
+                item.settings.image
+                | image_url: width: item.settings.image.width, height: item.settings.image.height
                 | image_tag
               }}
             {% endif %}
-            <div class="title">{{ block.settings.title }}</div>
-            <div class="subtitle">{{ block.settings.subtitle }}</div>
+            <div class="title">{{ item.settings.title }}</div>
+            <div class="subtitle">{{ item.settings.subtitle }}</div>
           </li>
         {% endif %}
       {% endfor %}
