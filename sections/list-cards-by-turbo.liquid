@@ -15,7 +15,7 @@
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <ul class="list-custom-cards">
-      {% for item in section.settings.blocks %}
+      {% for item in section.blocks %}
 
         {% if item.type == 'card' %}
           <li class="card-wrapper" style="background-color: {{ item.settings.bg_color }}">
