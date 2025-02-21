@@ -2896,6 +2896,12 @@ details[open] > .header__menu-item .icon-caret {
   margin-left: 1rem;
   position: static;
 }
+header .list-menu {
+ li * {
+  font-size: 18px;
+  color: #4D4D4D;
+ }
+}
 
 header-menu > details,
 details-disclosure > details {
