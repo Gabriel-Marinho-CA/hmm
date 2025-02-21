@@ -26,9 +26,8 @@
 {%- endif -%}
 
 <style>
-    #Slider--{{ section.id }} .slideshow__media.desktop,
-    #Slider--{{ section.id }} .slideshow__media.mobile {
-     display:none
+    #Slider--{{ section.id }} .slideshow__media.desktop{
+     display:none !important;
     }
   @media (min-width:767px) {
     #Slider--{{ section.id }} .slideshow__media.desktop{
