@@ -193,6 +193,47 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "list_cards_by_turbo_YAWDfr": {
+      "type": "list-cards-by-turbo",
+      "blocks": {
+        "card_mt36GV": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#b368eb",
+            "link": "",
+            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
+            "title": "<p>Crecimiento acelerado</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
+        },
+        "card_hYArFz": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#b4fa64",
+            "link": "",
+            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
+            "title": "<p>Crecimiento acelerado</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
+        },
+        "card_caJKfm": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#ff4375",
+            "link": "shopify://collections/productos",
+            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
+            "title": "<p>Crecimiento acelerado</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_mt36GV",
+        "card_hYArFz",
+        "card_caJKfm"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -200,6 +241,7 @@
     "multicolumn_Wm9TCi",
     "featured_collection",
     "image_banner_Gk8aLd",
-    "rich_text_J7brPh"
+    "rich_text_J7brPh",
+    "list_cards_by_turbo_YAWDfr"
   ]
 }
