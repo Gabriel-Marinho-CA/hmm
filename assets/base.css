@@ -2175,6 +2175,9 @@ input[type='checkbox'] {
   width: 100%;
 }
 
+.announcement-bar .slider-button {
+  display: none;
+}
 .announcement-bar .slider-button--next {
   margin-right: -1.5rem;
   min-width: 44px;
