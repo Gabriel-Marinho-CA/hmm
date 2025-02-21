@@ -154,14 +154,16 @@
             {%- endif -%}
 
             {% if block.settings.video %}
-              {{ block.settings.video | video_tag:
-              image_size: "3840x",
-              autoplay: true,
-              loop: true,
-              controls: false,
-              muted: false,
-              playsinline: true
-            }}
+              {{
+                block.settings.video
+                | video_tag:
+                  image_size: '3840x',
+                  autoplay: true,
+                  loop: true,
+                  controls: false,
+                  muted: false,
+                  playsinline: true
+              }}
             {% endif %}
           {%- else -%}
             {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
@@ -217,37 +219,6 @@
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons desktop">
-                <a
-                  {% if block.settings.link %}
-                    href="{{ block.settings.link }}"
-                  {% else %}
-                    role="link" aria-disabled="true"
-                  {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
-                >
-                  {{- block.settings.button_label | escape -}}
-                </a>
-              </div>
-            {%- endif -%}
-          </div>
-          <div
-            class="slideshow__text right_slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
-            style="align-self: {{ block.settings.right_align }}"
-          >
-            {%- if block.settings.right_content != blank -%}
-              <style>
-                .custom_slide_text_wrapper {
-                  max-width: 100%;
-                  justify-content: space-between !important;
-                  padding: 0;
-                }
-              </style>
-              <div class="banner__heading banner__heading_right {{ block.settings.heading_size }}">
-                {{ block.settings.right_content }}
-              </div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons mobile">
                 <a
                   {% if block.settings.link %}
                     href="{{ block.settings.link }}"
@@ -336,7 +307,6 @@
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
 
 {% schema %}
 {
