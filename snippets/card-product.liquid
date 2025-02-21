@@ -1,5 +1,8 @@
 <script>
-  function addProductFromCollection(id) {
+  function addProductFromCollection(ev,id) {
+
+  ev.preventDefault();
+  ev.stopPropagation();
 
     let formData = {
      'items': [{
@@ -595,7 +598,7 @@
       </div>
     </div>
   </div>
-    <button onclick="event.preventDefault();addProductFromCollection({{ card_product.selected_or_first_available_variant.id }})">Comprar</button>
+    <button onclick="addProductFromCollection(event,{{ card_product.selected_or_first_available_variant.id }})">Comprar</button>
 {%- else -%}
   {%- liquid
     assign ratio = 1
