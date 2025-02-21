@@ -2900,6 +2900,7 @@ header .list-menu {
  li * {
   font-size: 18px;
   color: #4D4D4D;
+  text-decoration: none;
  }
 }
 
