@@ -26,7 +26,7 @@
                 border-radius: 48px 48px 0 0;
                 bottom: 9px;
                 z-index: 0;
-                background: attr(data-bg-color)
+                background: var(--bg-color)
             }
 
             img {
@@ -66,7 +66,7 @@
               <a class="link" href="{{ item.settings.link }}"></a>
             {% endif %}
             {% if item.settings.image != blank %}
-              <div class="image-card" data-bg-color="{{ item.settings.bg_color  }}">
+              <div class="image-card" style="--bg-color:{{ item.settings.bg_color }}">
                 {{
                   item.settings.image
                   | image_url: width: item.settings.image.width, height: item.settings.image.height
