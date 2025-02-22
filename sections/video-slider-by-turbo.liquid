@@ -170,17 +170,17 @@
             {%- endfor -%}
           </div>
         </div>
-        {% if section.settings.seal_1 != blank %}
-          <div class="seal-1">
-            {{ section.settings.seal_1 | image_url: width: 152, height: 192 | image_tag }}
-          </div>
-        {% endif %}
       </testimonials-component>
     {%- endif -%}
 
     <div class="buy-btn-wrapper color-{{ section.settings.color_scheme }}">
       <a href="{{ section.settings.btn_link }}" class="buy-btn">{{ section.settings.btn_text }}</a>
     </div>
+    {% if section.settings.seal_1 != blank %}
+      <div class="seal-1">
+        {{ section.settings.seal_1 | image_url: width: 152, height: 192 | image_tag }}
+      </div>
+    {% endif %}
   </div>
 
   {% if section.settings.seal_2 != blank %}
