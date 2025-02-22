@@ -1,0 +1,165 @@
+{% assign main = section.settings %}
+{% style %}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ main.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ main.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+
+      @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+          padding-top: {{ main.padding_top }}px;
+          padding-bottom: {{ main.padding_bottom }}px;
+        }
+      }
+      .section-{{ section.id }} {
+      background:{{ main.background_section_color }};
+      position:relative;
+
+      & .title-section{
+        display:flex;
+        justify-content: space-between;
+        gap:1rem;
+        align-items:center;
+
+        @media (max-width:750px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+      }
+      & .title-section *:not(a){
+        color: {{ main.title_section_color }};
+        margin:0;
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 48px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          -webkit-text-stroke: 2px;
+
+          @media (max-width:750px) {
+            font-size:32px;
+            line-height:1;
+          }
+      }
+
+      & .title-section a {
+          font-family: "Quicksand";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #FFC61C;
+      color: #0B2F6F;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 13px 28px;
+      box-shadow: 2px 4px 0px 0px #000000;
+      border-radius: 300px;
+      text-decoration: none;
+      transition: all .5s ease;
+
+      &:hover {
+        background-color: #EAAF00;
+        box-shadow: 2px 4px 0px 0px #0B2F6F;
+      }
+      }
+
+  }
+{% endstyle %}
+<div
+  {% if main.id_section %}
+    id="{{ main.id_section |  handleize}}"
+  {% endif %}
+
+  class="section-{{ section.id }}-padding section-{{ section.id }}"
+>
+  <div class="page-width">
+    <div class="title-section">
+      {{ main.title }}
+      <a class="insta-btn" href="{{ main.instagram_link }}" target="_blank">{{ main.instagram_title }}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Instagram by turbo",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "id_section",
+      "label": "Id da seção"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Título"
+    },
+    {
+      "type": "text",
+      "id": "instagram_title",
+      "label": "Texto Instagram"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Link Instagram"
+    },
+    {
+      "type": "header",
+      "content": "Cores"
+    },
+    {
+      "type": "color",
+      "id": "title_section_color",
+      "label": "Cor do título da seção",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Espaçamento"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram section by turbo"
+    }
+  ]
+}
+{% endschema %}
