@@ -234,6 +234,53 @@
         "card_caJKfm"
       ],
       "settings": {}
+    },
+    "deals_bar_by_turbo_PhqXmB": {
+      "type": "deals-bar-by-turbo",
+      "blocks": {
+        "deals_9dGdWN": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Delicioso y práctico</p>"
+          }
+        },
+        "deals_YhXkeJ": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Fórmula exclusiva</p>"
+          }
+        },
+        "deals_jbakP3": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Cabello más fuerte</p>"
+          }
+        },
+        "deals_pAkBay": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Belleza completa</p>"
+          }
+        }
+      },
+      "block_order": [
+        "deals_9dGdWN",
+        "deals_YhXkeJ",
+        "deals_jbakP3",
+        "deals_pAkBay"
+      ],
+      "settings": {
+        "id_section": "",
+        "infinite_scroll": true,
+        "background_section_color": "#fff",
+        "text_color": "#191970",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -242,6 +289,7 @@
     "featured_collection",
     "image_banner_Gk8aLd",
     "rich_text_J7brPh",
-    "list_cards_by_turbo_YAWDfr"
+    "list_cards_by_turbo_YAWDfr",
+    "deals_bar_by_turbo_PhqXmB"
   ]
 }
