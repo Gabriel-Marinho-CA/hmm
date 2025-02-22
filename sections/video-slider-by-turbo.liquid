@@ -1,0 +1,413 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background:{{ section.settings.background_section_color }};
+  }
+  .video-slider .testimonial__image {
+    height: 500px;
+    max-width: 27rem;
+  }
+  .video-slider testimonials-component {
+    --block-width: 300px !important;
+  }
+  .testimonials {
+    position: relative;
+  }
+  .video-slider .testimonial__image {
+    background: none;
+  }
+  .video-slider video {
+    height: 100% !important;
+    border-radius: 15px;
+  }
+  .video-slider .testimonial__image.media-wrapper {
+    margin-right: 0;
+  }
+  .video-slider .video-slider-list:before,
+  .video-slider .video-slider-list:after {
+    width: 0%;
+  }
+  .video-slider-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .video-slider-list {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: auto;
+    -webkit-overflow-scrolling: auto;
+    scrollbar-color: #FDCB25 #ffffff;
+    scrollbar-width: thin;
+    padding-bottom: 10px;
+  }
+  .video-slider-list::-webkit-scrollbar-track {
+    background: white;
+  }
+  .video-slider-list::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+  }
+  .video-slider:hover .video-slider-list::-webkit-scrollbar-thumb {
+    background: gray;
+  }
+  .video-slider-list::-webkit-scrollbar-thumb:hover {
+    background: black !important;
+  }
+  .video-slider-list {
+    position: static;
+    display: flex;
+  }
+  @media only screen and (max-width: 800px) {
+    .video-slider .testimonial__image {
+      margin-left: 0;
+    }
+    .video-slider .video-slider-list {
+      width: 100%;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  .section-{{ section.id }}-padding {
+  position:relative;
+  z-index:0;
+
+  .title {
+    font-size: 56px;
+    color: #fff;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
+    background-repeat: round;
+  }
+
+    .buy-btn-wrapper {
+      margin-top: 5rem;
+      margin-inline: auto;
+      display: block;
+      width: fit-content;
+      border-radius: 32px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 56px;
+        border-radius: 32px;
+        width: 190px;
+        color: inherit;
+        background: inherit;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .seal-1 {
+      position: absolute;
+      bottom: 2%;
+      left: -1%;
+    }
+    .seal-2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+</style>
+
+<div
+  class="video-slider section-{{ section.id }}-padding"
+  {% if section.settings.id_section %}
+    id="{{ section.settings.id_section |  handleize}}"
+  {% endif %}
+>
+  <div class="testimonials page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 style="color:{{ section.settings.title_color }}" class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.heading_alignment }}">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+
+    {%- assign block_count = section.blocks.size -%}
+    {%- if block_count > 0 -%}
+      <svg class="visually-hidden">
+        <defs>
+          <clipPath id="testimonial-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.11,0.09 C0.014,0.174,-0.003,0.398,0,0.499 C-0.003,0.618,0.015,0.849,0.125,0.919 C0.235,0.989,0.413,0.997,0.504,0.999 C0.604,0.999,0.719,0.999,0.869,0.924 C0.974,0.849,0.994,0.704,0.999,0.499 C1,0.295,0.984,0.155,0.879,0.075 C0.796,0.011,0.593,-0.003,0.504,0 C0.413,-0.005,0.206,0.006,0.11,0.09"></path></clipPath>
+        </defs>
+      </svg>
+      <testimonials-component
+        data-slider="{% if block_count > 1 %}true{% else %}false{% endif %}"
+        data-autorotate="{{ section.settings.autorotate }}"
+        data-autorotate-speed="{{ section.settings.autorotate_speed | times: 1000 }}"
+        style="--block-count: {{ block_count | minus: 1 }};"
+      >
+        <div class="testimonial__list-wrapper">
+          <div class="video-slider-list" id="Testimonials-{{ section.id }}">
+            {%- for block in section.blocks -%}
+              <div
+                class="video-slider-item{% if section.blocks.first == true or block_count == 1 %} is-selected{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <div class="testimonial__image media-wrapper media-wrapper--small">
+                  {%- if block.settings.video != blank -%}
+                    <!--
+                      <video src="https://cdn.shopify.com/videos/c/o/v/176c5f40b3cb49d7b72a5dfaa681345b.mp4" muted  playsinline autoplay loop></video>
+                    -->
+                    {{
+                      block.settings.video
+                      | video_tag:
+                        image_size: '3840x',
+                        autoplay: false,
+                        loop: true,
+                        controls: true,
+                        muted: false,
+                        playsinline: true
+                    }}
+                    <!--
+                      <video autoplay="autoplay" loop="loop" muted playsinline>
+                        <source src="{{ block.settings.video }}" type="video/mp4">
+                      </video>
+                    -->
+                  {%- else -%}
+                    <div class="media media--square">
+                      {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </testimonials-component>
+    {%- endif -%}
+
+    <div class="buy-btn-wrapper color-{{ section.settings.color_scheme }}">
+      <a href="{{ section.settings.btn_link }}" class="buy-btn">{{ section.settings.btn_text }}</a>
+    </div>
+    {% if section.settings.seal_1 != blank %}
+      <div class="seal-1">
+        {{ section.settings.seal_1 | image_url: width: 152, height: 192 | image_tag }}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if section.settings.seal_2 != blank %}
+    <div class="seal-2">
+      {{ section.settings.seal_2 | image_url: width: 127, height: 127 | image_tag }}
+    </div>
+  {% endif %}
+</div>
+{% schema %}
+{
+  "name": "Videos slider by turbo",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "id_section",
+      "label": "Id da seção"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Video slider",
+      "label": "Videos title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "default": "#FFF",
+      "label": "Cor title"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Imagem background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_section_color",
+      "label": "Cor do background da seção",
+      "default": "radial-gradient(50% 50% at 50% 50%, #8FD83B 0%, #B4FA64 100%)"
+    },
+    {
+      "type": "image_picker",
+      "id": "seal_1",
+      "label": "Selo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "seal_2",
+      "label": "Selo 2"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto botão",
+      "default": "Comprar"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Link botão"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "H1"
+        },
+        {
+          "value": "h1",
+          "label": "H2"
+        },
+        {
+          "value": "h0",
+          "label": "H3"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "div",
+          "label": "H7"
+        },
+        {
+          "value": "span",
+          "label": "H8"
+        },
+        {
+          "value": "p",
+          "label": "Normal"
+        }
+      ],
+      "default": "h2",
+      "label": "H2",
+      "info": "Headings"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Videos slider by turbo",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}
