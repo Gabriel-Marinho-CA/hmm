@@ -4,18 +4,6 @@
     padding-bottom: {{ section.settings.padding_bottom }}px;
     background:{{ section.settings.background_section_color }};
     background-image: url("{{ section.settings.bg_image | asset_img_url: 'original' }}")
-
-    .buy-btn-wrapper {
-      margin-inline:auto;
-      display:block;
-      width: fit-content;
-      a {
-        color: inherit;
-        background: inherit;
-        text-decoration:none;
-        font-size:20px;
-      }
-    }
   }
   .video-slider .testimonial__image {
     height: 500px;
@@ -79,6 +67,22 @@
     }
   }
 {%- endstyle -%}
+
+<style>
+  .section-{{ section.id }}-padding {
+    .buy-btn-wrapper {
+      margin-inline: auto;
+      display: block;
+      width: fit-content;
+      a {
+        color: inherit;
+        background: inherit;
+        text-decoration: none;
+        font-size: 20px;
+      }
+    }
+  }
+</style>
 
 <div
   class="video-slider section-{{ section.id }}-padding"
@@ -146,8 +150,8 @@
       </testimonials-component>
     {%- endif -%}
 
-    <div class="buy-btn-wrapper color-{{ section.settings.color_scheme }}" >
-        <a href="{{ section.settings.btn_link }}" class="buy-btn">{{ section.settings.btn_text }}</a>
+    <div class="buy-btn-wrapper color-{{ section.settings.color_scheme }}">
+      <a href="{{ section.settings.btn_link }}" class="buy-btn">{{ section.settings.btn_text }}</a>
     </div>
   </div>
 
