@@ -75,6 +75,11 @@
   position:relative;
   z-index:0;
 
+  .title {
+    font-size: 56px;
+    color: #fff;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -130,7 +135,7 @@
 >
   <div class="testimonials page-width">
     {%- if section.settings.title != blank -%}
-      <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.heading_alignment }}">
+      <h2 style="color:{{ section.settings.title_color }}" class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.heading_alignment }}">
         {{ section.settings.title }}
       </h2>
     {%- endif -%}
@@ -226,6 +231,12 @@
       "id": "title",
       "default": "Video slider",
       "label": "Videos title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "default": "#FFF",
+      "label": "Cor title"
     },
     {
       "type": "image_picker",
