@@ -102,6 +102,20 @@
 </div>
 
 <script>
+  document.addEventListener('DOMContentLoaded',function() {
+    const deals = document.querySelectorAll(".deal-slide");
+    const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+    if (deals.length > 0 && deals.length < 8) {
+        let index = 0;
+        while (swiperWrapper.children.length < 8) {
+            const clone = deals[index % deals.length].cloneNode(true);
+            swiperWrapper.appendChild(clone);
+            index++;
+        }
+    }
+  })
+  
   {% if main.infinite_scroll %}
     new Swiper('.section-{{ section.id }} .swiper', {
     spaceBetween: 40,
