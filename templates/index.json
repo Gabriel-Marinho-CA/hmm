@@ -320,6 +320,7 @@
         "id_section": "",
         "color_scheme": "scheme-507647c6-1b84-49a0-8942-c8e49e155acc",
         "title": "Tu ritual de belleza con un toque dulce",
+        "title_color": "#FFF",
         "bg_image": "shopify://shop_images/Group_1000006247.png",
         "background_section_color": "linear-gradient(0deg, rgba(255, 100, 25, 1), rgba(255, 100, 25, 1) 100%)",
         "seal_1": "shopify://shop_images/Group_40075.png",
@@ -329,8 +330,8 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_tag": "h2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 88
       }
     }
   },
