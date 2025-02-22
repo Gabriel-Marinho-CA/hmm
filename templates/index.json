@@ -210,10 +210,10 @@
         "card_hYArFz": {
           "type": "card",
           "settings": {
-            "bg_color": "#b4fa64",
+            "bg_color": "#ff6419",
             "link": "",
-            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
-            "title": "<p>Crecimiento acelerado</p>",
+            "image": "shopify://shop_images/young-beautiful-hispanic-woman-standing-with-arms-crossed-gesture-coffee-shop-terrace_1.png",
+            "title": "<p>Fuerza y volumen inmediato</p>",
             "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
           }
         },
@@ -222,9 +222,9 @@
           "settings": {
             "bg_color": "#ff4375",
             "link": "shopify://collections/productos",
-            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
-            "title": "<p>Crecimiento acelerado</p>",
-            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+            "image": "shopify://shop_images/woman-wearing-sundress_4_-Photoroom_1.png",
+            "title": "<p>Belleza completa</p>",
+            "subtitle": "<p>Además del cabello, Rosa Hair nutre la piel y fortalece las uñas.</p>"
           }
         }
       },
@@ -234,6 +234,117 @@
         "card_caJKfm"
       ],
       "settings": {}
+    },
+    "deals_bar_by_turbo_PhqXmB": {
+      "type": "deals-bar-by-turbo",
+      "blocks": {
+        "deals_9dGdWN": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Delicioso y práctico</p>"
+          }
+        },
+        "deals_YhXkeJ": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Fórmula exclusiva</p>"
+          }
+        },
+        "deals_jbakP3": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Cabello más fuerte</p>"
+          }
+        },
+        "deals_pAkBay": {
+          "type": "deals",
+          "settings": {
+            "icon_deal": "shopify://shop_images/Group_47.png",
+            "text_deal": "<p>Belleza completa</p>"
+          }
+        }
+      },
+      "block_order": [
+        "deals_9dGdWN",
+        "deals_YhXkeJ",
+        "deals_jbakP3",
+        "deals_pAkBay"
+      ],
+      "settings": {
+        "id_section": "",
+        "infinite_scroll": true,
+        "background_section_color": "#ff4375",
+        "text_color": "#ffffff",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "video_slider_by_turbo_Cg3Trf": {
+      "type": "video-slider-by-turbo",
+      "blocks": {
+        "testimonial_NdpUmd": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_tRLxGT": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_xYghU8": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_rUi8xy": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_NdpUmd",
+        "testimonial_tRLxGT",
+        "testimonial_xYghU8",
+        "testimonial_rUi8xy"
+      ],
+      "settings": {
+        "id_section": "",
+        "color_scheme": "scheme-507647c6-1b84-49a0-8942-c8e49e155acc",
+        "title": "Tu ritual de belleza con un toque dulce",
+        "title_color": "#ffffff",
+        "bg_image": "shopify://shop_images/Group_1000006247.png",
+        "background_section_color": "linear-gradient(0deg, rgba(255, 100, 25, 1), rgba(255, 100, 25, 1) 100%)",
+        "seal_1": "shopify://shop_images/Group_40075.png",
+        "seal_2": "shopify://shop_images/Group_40085.png",
+        "btn_text": "COMPRAR",
+        "btn_link": "shopify://products/rosa-hair",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 60,
+        "padding_bottom": 88
+      }
+    },
+    "instagram_section_by_turbo_bMbwTz": {
+      "type": "instagram-section-by-turbo",
+      "settings": {
+        "id_section": "",
+        "title": "<p>Síguenos en Instagram</p>",
+        "instagram_title": "@instagram",
+        "instagram_link": "",
+        "title_section_color": "#ff4375",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -242,6 +353,9 @@
     "featured_collection",
     "image_banner_Gk8aLd",
     "rich_text_J7brPh",
-    "list_cards_by_turbo_YAWDfr"
+    "list_cards_by_turbo_YAWDfr",
+    "deals_bar_by_turbo_PhqXmB",
+    "video_slider_by_turbo_Cg3Trf",
+    "instagram_section_by_turbo_bMbwTz"
   ]
 }
