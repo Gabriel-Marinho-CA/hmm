@@ -70,11 +70,13 @@
 <style>
   .section-{{ section.id }}-padding {
   position:relative;
+  z-index:0;
 
   &::before {
     position: absolute;
     top: 0;
     left:0;
+    z-index: -1;
     content:"";
     width: 100%;
     height: 100%;
@@ -82,10 +84,17 @@
   }
 
     .buy-btn-wrapper {
+      margin-top: 5rem;
       margin-inline: auto;
       display: block;
       width: fit-content;
       a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 32px;
+        height: 56px;
+        width: 190px;
         color: inherit;
         background: inherit;
         text-decoration: none;
