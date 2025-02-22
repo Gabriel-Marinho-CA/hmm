@@ -81,11 +81,14 @@
           {% if block.type == 'deals' %}
             <li class="swiper-slide deal-slide">
               <div class="deal-wrapper">
-                {{
-                  block.settings.icon_deal
-                  | image_url: width: block.settings.icon_deal.width, height: block.settings.icon_deal.height
-                  | image_tag: loading: 'lazy'
-                }}
+                {% if block.settings.icon_deal != blank %}
+                  {{
+                    block.settings.icon_deal
+                    | image_url: width: block.settings.icon_deal.width, height: block.settings.icon_deal.height
+                    | image_tag: loading: 'lazy'
+                  }}
+                {% endif %}
+
                 <div class="text-deals">
                   {{ block.settings.text_deal }}
                 </div>
