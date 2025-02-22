@@ -281,6 +281,57 @@
         "padding_top": 24,
         "padding_bottom": 24
       }
+    },
+    "video_slider_by_turbo_Cg3Trf": {
+      "type": "video-slider-by-turbo",
+      "blocks": {
+        "testimonial_NdpUmd": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_tRLxGT": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_xYghU8": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_rUi8xy": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_NdpUmd",
+        "testimonial_tRLxGT",
+        "testimonial_xYghU8",
+        "testimonial_rUi8xy"
+      ],
+      "settings": {
+        "id_section": "",
+        "color_scheme": "scheme-507647c6-1b84-49a0-8942-c8e49e155acc",
+        "title": "Tu ritual de belleza con un toque dulce",
+        "bg_image": "shopify://shop_images/Group_1000006247.png",
+        "background_section_color": "linear-gradient(0deg, rgba(255, 100, 25, 1), rgba(255, 100, 25, 1) 100%)",
+        "seal_1": "shopify://shop_images/Group_40075.png",
+        "seal_2": "shopify://shop_images/Group_40085.png",
+        "btn_text": "COMPRAR",
+        "btn_link": "shopify://products/rosa-hair",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -290,6 +341,7 @@
     "image_banner_Gk8aLd",
     "rich_text_J7brPh",
     "list_cards_by_turbo_YAWDfr",
-    "deals_bar_by_turbo_PhqXmB"
+    "deals_bar_by_turbo_PhqXmB",
+    "video_slider_by_turbo_Cg3Trf"
   ]
 }
