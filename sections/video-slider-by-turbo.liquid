@@ -78,7 +78,7 @@
     content:"";
     width: 100%;
     height: 100%;
-    background-image: url("{{ section.settings.bg_image |  asset_url}}");
+    background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
   }
 
     .buy-btn-wrapper {
