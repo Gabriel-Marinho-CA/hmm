@@ -320,7 +320,7 @@
         "id_section": "",
         "color_scheme": "scheme-507647c6-1b84-49a0-8942-c8e49e155acc",
         "title": "Tu ritual de belleza con un toque dulce",
-        "title_color": "#FFF",
+        "title_color": "#ffffff",
         "bg_image": "shopify://shop_images/Group_1000006247.png",
         "background_section_color": "linear-gradient(0deg, rgba(255, 100, 25, 1), rgba(255, 100, 25, 1) 100%)",
         "seal_1": "shopify://shop_images/Group_40075.png",
@@ -333,6 +333,18 @@
         "padding_top": 60,
         "padding_bottom": 88
       }
+    },
+    "instagram_section_by_turbo_bMbwTz": {
+      "type": "instagram-section-by-turbo",
+      "settings": {
+        "id_section": "",
+        "title": "<p>Síguenos en Instagram</p>",
+        "instagram_title": "@instagram",
+        "instagram_link": "",
+        "title_section_color": "#ff4375",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -343,6 +355,7 @@
     "rich_text_J7brPh",
     "list_cards_by_turbo_YAWDfr",
     "deals_bar_by_turbo_PhqXmB",
-    "video_slider_by_turbo_Cg3Trf"
+    "video_slider_by_turbo_Cg3Trf",
+    "instagram_section_by_turbo_bMbwTz"
   ]
 }
