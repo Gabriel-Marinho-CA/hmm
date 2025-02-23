@@ -122,7 +122,7 @@
 
 {% schema %}
 {
-  "name": "Newsletter",
+  "name": "Newsletter by turbo",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -134,6 +134,24 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color_background",
+      "id": "background_section_color",
+      "label": "Cor do background da seção",
+      "default": "radial-gradient(50% 50% at 50% 50%, #8FD83B 0%, #B4FA64 100%)"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo newsletter",
+      "default": "<h3>Obtén 10% de descuento en tu primera compra</h3>"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Titulo newsletter",
+      "default": "<p>Recibe también contenido y promociones exclusivas en tu correo.</p>"
     },
     {
       "type": "checkbox",
@@ -236,7 +254,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.newsletter.presets.name",
+      "name": "Newsletter",
       "blocks": [
         {
           "type": "heading"
