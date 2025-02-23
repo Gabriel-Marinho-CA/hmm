@@ -73,7 +73,69 @@
         },
         "pagamento_MHYwWj": {
           "type": "pagamento",
-          "settings": {}
+          "settings": {
+            "heading": "<h4>Pago</h4>"
+          }
+        },
+        "pagamento_img_EU4QRT": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_36.png"
+          }
+        },
+        "pagamento_img_XE4mfM": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_39.png"
+          }
+        },
+        "pagamento_img_icGked": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_37.png"
+          }
+        },
+        "pagamento_img_8WwVdJ": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_42.png"
+          }
+        },
+        "pagamento_img_gKWqgz": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_40.png"
+          }
+        },
+        "pagamento_img_6jJ7Yr": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_38.png"
+          }
+        },
+        "pagamento_img_3rBbEx": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_41.png"
+          }
+        },
+        "pagamento_img_yeJWq3": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_43.png"
+          }
+        },
+        "pagamento_img_z8zNL3": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/image_44.png"
+          }
+        },
+        "pagamento_img_TnRTei": {
+          "type": "pagamento_img",
+          "settings": {
+            "payment_img": "shopify://shop_images/Frame_14101435.png"
+          }
         }
       },
       "block_order": [
@@ -85,7 +147,17 @@
         "socias_GzNzqf",
         "link_list_PUbb76",
         "link_list_tEWFtn",
-        "pagamento_MHYwWj"
+        "pagamento_MHYwWj",
+        "pagamento_img_EU4QRT",
+        "pagamento_img_XE4mfM",
+        "pagamento_img_icGked",
+        "pagamento_img_8WwVdJ",
+        "pagamento_img_gKWqgz",
+        "pagamento_img_6jJ7Yr",
+        "pagamento_img_3rBbEx",
+        "pagamento_img_yeJWq3",
+        "pagamento_img_z8zNL3",
+        "pagamento_img_TnRTei"
       ],
       "settings": {
         "copyright_text": "",
