@@ -56,12 +56,12 @@
 </style>
 
 <div
-  class="deals-bar deals-{{ section.id }}"
+  class="deals-bar deals-{{ section.id }} deals-{{ section.id }}-padding"
   {% if section.settings.deal_bar_active %}
     data-sticky="true"
   {% endif %}
 >
-  <div class="page-width deals-{{ section.id }}-padding">
+  <div class="page-width">
     <div class="wrapper-deals">
       <ul>
         {% for block in section.blocks %}
