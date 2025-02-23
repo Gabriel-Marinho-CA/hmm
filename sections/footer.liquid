@@ -76,7 +76,7 @@
             <div class="wrapper wapper-payment">
               <ul>
                 {% for block_payment in section.blocks %}
-                  {% if block_payment.type =='pagamento' %}
+                  {% if block_payment.type =='pagamento_img' %}
                     <li>
                       {% if block_payment.settings.payment_img != blank %}
                         {{ block_payment.settings.payment_img | image_url: width: 33, height: 20 | image_tag }}
