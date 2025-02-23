@@ -54,7 +54,7 @@
           "type": "deal",
           "settings": {
             "img": "shopify://shop_images/Layer_1.png",
-            "title": "<p>Frete Grátis</p>",
+            "title": "<p><strong>Frete Grátis</strong></p>",
             "subtitle": "<p>acima de R$300</p>"
           }
         },
@@ -70,7 +70,7 @@
           "type": "deal",
           "settings": {
             "img": "shopify://shop_images/Icon.png",
-            "title": "<p>Garantia</p>",
+            "title": "<p><strong>Garantia</strong></p>",
             "subtitle": "<p>de 7 dias</p>"
           }
         },
