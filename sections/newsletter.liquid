@@ -17,13 +17,26 @@
 {%- endstyle -%}
 
 <style>
-  .left-newsletter {
-    * {
-      margin:0;
-      line-height: 1;
+  .section-{{ section.id }}-padding {
+    .newsletter__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap:1.25rem;
+    .left-newsletter {
+      text-align: start;
+      * {
+        margin: 0;
+        line-height: 1;
+      }
+
+      div {
+        max-width: 100%;
+      }
+    }
+    
     }
 
-    
   }
 </style>
 
