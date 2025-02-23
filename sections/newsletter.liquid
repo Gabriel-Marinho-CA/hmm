@@ -17,36 +17,63 @@
 {%- endstyle -%}
 
 <style>
-  .section-{{ section.id }}-padding {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap:1.25rem;
-      .left-newsletter {
-        text-align: start;
-        * {
-          margin: 0;
-          line-height: 1;
+    .section-{{ section.id }}-padding {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:1.25rem;
+        .left-newsletter {
+          text-align: start;
+          * {
+            margin: 0;
+            line-height: 1;
+          }
+
+          div {
+            max-width: 100%;
+          }
         }
 
-        div {
-          max-width: 100%;
+    .form-wrapper {
+      margin:0;
+      width: 100%;
+  max-width: 387px;
+
+      .field {
+        &::before,
+        &::after {
+          box-shadow: none !important;
+          border:none !important;
         }
-      }
+        input {
+          border-radius: 32px;
+          padding-right: calc(86px + 1rem);
+        }
 
-  .form-wrapper {
-    margin:0;
+        label {
+          top:50%;
+          transform: translateY(-50%);
 
-    .field {
-      &::before,
-      &::after {
-        box-shadow: none !important;
-        border:none !important;
-      }
-      
+          &:focus {
+            transform: translateY(-70%);
+          }
+        }
+        #Subscribe {
+          width: 86px;
+    margin-right: 1rem;
+
+    span {
+      width: 100%;
+    background: #FF4375;
+    border-radius: 32px;
+    color: #fff;
+    height: 37px;
+  }
     }
-  }
-  }
+        }
+      }
+
+    }
 </style>
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
@@ -112,11 +139,11 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
+                    placeholder="Ingresa tu mejor correo"
                     required
                   >
                   <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
+                    Ingresa tu mejor correo
                   </label>
                   <button
                     type="submit"
