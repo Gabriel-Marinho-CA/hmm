@@ -13,19 +13,26 @@
 {% endstyle %}
 <style>
   .deals-bar {
+    width: 100%;
     background-color: #fff;
     box-shadow: 0px -4px 8px 0px #00000014;
     display: none;
 
-    @media (min-width:800px) {
-        &.desktop {
-            display: block !important;
-        }
+    @media (min-width: 800px) {
+      &.desktop {
+        display: block !important;
+      }
     }
-    @media (min-width:799px) {
-        &.mobile {
-            display: block !important;
-        }
+    @media (min-width: 799px) {
+      &.mobile {
+        display: block !important;
+      }
+    }
+
+    &[data-sticky="true"] {
+      position: fixed;
+      bottom: 0;
+      z-index: 10;
     }
 
     ul {
@@ -68,7 +75,6 @@
   }
 </style>
 
-
 <div
   class="deals-bar deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile == true %}mobile{% endif %}"
   {% if section.settings.deal_bar_active %}
@@ -105,10 +111,6 @@
     </div>
   </div>
 </div>
-
-<script>
-
-</script>
 
 {% schema %}
 {
