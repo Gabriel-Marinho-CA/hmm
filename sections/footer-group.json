@@ -13,6 +13,43 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_n8Bhc6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_40070.png",
+            "image_width": 205,
+            "alignment": ""
+          }
+        },
+        "text_UF3qJG": {
+          "type": "text",
+          "settings": {
+            "heading": "CONTACTO",
+            "subtext": "<p>Atendimiento: Lunes a Viernes, de 09:00 a 18:00.</p>"
+          }
+        },
+        "link_list_PUbb76": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Links",
+            "menu": "links"
+          }
+        },
+        "link_list_tEWFtn": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Ayuda",
+            "menu": "ayuda"
+          }
+        }
+      },
+      "block_order": [
+        "image_n8Bhc6",
+        "text_UF3qJG",
+        "link_list_PUbb76",
+        "link_list_tEWFtn"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
