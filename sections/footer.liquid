@@ -72,6 +72,25 @@
               </ul>
             </div>
           </div>
+        {% when 'pagamento' %}
+          <div class="payment col-footer">
+            <div class="title-footer">
+              {{ block.settings.heading }}
+            </div>
+            <div class="wrapper wapper-payment">
+              <ul>
+                {% for block_payment in section.blocks %}
+                  {% if block_payment.type =='pagamento' %}
+                    <li>
+                      {% if block_payment.settings.payment_img != blank %}
+                        {{ block_payment.settings.payment_img | image_url: width: 33, height: 20 | image_tag }}
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
         {% when 'link_list' %}
           <div class="link-list-footer">
             <div class="title-footer">
@@ -266,6 +285,17 @@
           "type": "url",
           "id": "link_social",
           "label": "Link da rede social"
+        }
+      ]
+    },
+    {
+      "type": "pagamento",
+      "name": "Pagamento",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "payment_img",
+          "label": "Pagamento imagens"
         }
       ]
     },
