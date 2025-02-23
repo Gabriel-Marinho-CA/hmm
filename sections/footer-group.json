@@ -14,52 +14,78 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "image_n8Bhc6": {
-          "type": "image",
+        "logo_7xgVB4": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Group_40070.png",
-            "image_width": 205,
-            "alignment": ""
+            "logo": "shopify://shop_images/Group_40070.png",
+            "width": 200,
+            "text_rodape": ""
           }
         },
-        "text_UF3qJG": {
-          "type": "text",
+        "contact_tRm9RP": {
+          "type": "contact",
           "settings": {
-            "heading": "CONTACTO",
-            "subtext": "<p>Atendimiento: Lunes a Viernes, de 09:00 a 18:00.</p>"
+            "heading": "<h4>Contato</h4>",
+            "body": "<p>Atendimiento: Lunes a Viernes, de 09:00 a 18:00.</p>"
+          }
+        },
+        "socias_LiRBdW": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial.png",
+            "link_social": ""
+          }
+        },
+        "socias_t4QEbF": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial_1.png",
+            "link_social": ""
+          }
+        },
+        "socias_DiATAh": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial_2.png",
+            "link_social": ""
+          }
+        },
+        "socias_GzNzqf": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial_3.png",
+            "link_social": ""
           }
         },
         "link_list_PUbb76": {
           "type": "link_list",
           "settings": {
-            "heading": "Links",
+            "heading": "<p>Links</p>",
             "menu": "links"
           }
         },
         "link_list_tEWFtn": {
           "type": "link_list",
           "settings": {
-            "heading": "Ayuda",
+            "heading": "<p>Ayuda</p>",
             "menu": "ayuda"
           }
         }
       },
       "block_order": [
-        "image_n8Bhc6",
-        "text_UF3qJG",
+        "logo_7xgVB4",
+        "contact_tRm9RP",
+        "socias_LiRBdW",
+        "socias_t4QEbF",
+        "socias_DiATAh",
+        "socias_GzNzqf",
         "link_list_PUbb76",
         "link_list_tEWFtn"
       ],
       "settings": {
+        "copyright_text": "",
         "color_scheme": "scheme-1",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": true,
+        "bg_copy_color": "",
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
