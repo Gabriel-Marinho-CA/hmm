@@ -47,6 +47,63 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "ofertas_info_by_turbo_xYNRhj": {
+      "type": "ofertas-info-by-turbo",
+      "blocks": {
+        "deal_NnVLYK": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1.png",
+            "title": "<p>Frete Grátis</p>",
+            "subtitle": "<p>acima de R$300</p>"
+          }
+        },
+        "deal_7jJwkq": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/icon-park-outline_bank-card.png",
+            "title": "<p>Parcele em até</p>",
+            "subtitle": "<p><strong>3x sem juros</strong></p>"
+          }
+        },
+        "deal_GMX9UU": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Icon.png",
+            "title": "<p>Garantia</p>",
+            "subtitle": "<p>de 7 dias</p>"
+          }
+        },
+        "deal_Y76J3M": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1.png",
+            "title": "<p>Frete Grátis</p>",
+            "subtitle": "<p>acima de R$300</p>"
+          }
+        },
+        "deal_WjecRh": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1.png",
+            "title": "<p>Frete Grátis</p>",
+            "subtitle": "<p>acima de R$300</p>"
+          }
+        }
+      },
+      "block_order": [
+        "deal_NnVLYK",
+        "deal_7jJwkq",
+        "deal_GMX9UU",
+        "deal_Y76J3M",
+        "deal_WjecRh"
+      ],
+      "settings": {
+        "deal_bar_active": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_Wm9TCi": {
       "type": "multicolumn",
       "blocks": {
@@ -383,6 +440,7 @@
   },
   "order": [
     "main_banner_by_turbo_4HTpEC",
+    "ofertas_info_by_turbo_xYNRhj",
     "multicolumn_Wm9TCi",
     "featured_collection",
     "image_banner_Gk8aLd",
