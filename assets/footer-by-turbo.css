@@ -209,7 +209,7 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #0b2f6f;
+    color: #000000CC;
 
     @media (max-width: 547px) {
       text-align: center;
@@ -223,6 +223,6 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     text-decoration: none;
-    color: #0b2f6f;
+    color: #000;
   }
 }
