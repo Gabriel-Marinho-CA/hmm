@@ -77,17 +77,17 @@
         "deal_Y76J3M": {
           "type": "deal",
           "settings": {
-            "img": "shopify://shop_images/Layer_1.png",
-            "title": "<p>Frete Grátis</p>",
-            "subtitle": "<p>acima de R$300</p>"
+            "img": "shopify://shop_images/Frame.png",
+            "title": "<p>Pagamento</p>",
+            "subtitle": "<p><strong>100% Seguro</strong></p>"
           }
         },
         "deal_WjecRh": {
           "type": "deal",
           "settings": {
-            "img": "shopify://shop_images/Layer_1.png",
-            "title": "<p>Frete Grátis</p>",
-            "subtitle": "<p>acima de R$300</p>"
+            "img": "shopify://shop_images/icon-plane.png",
+            "title": "<p>Entrega para</p>",
+            "subtitle": "<p><strong>todo o Brasil</strong></p>"
           }
         }
       },
