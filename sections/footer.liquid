@@ -39,16 +39,6 @@
               </div>
             {% endif %}
           </div>
-        {% when 'newsletter' %}
-          <div class="newsletter-wrapper">
-            <div class="title-newsleter">
-              {{ block.settings.heading }}
-            </div>
-            {% render 'newsletter-block',
-              placeholder: block.settings.placeholder,
-              button_label: block.settings.button
-            %}
-          </div>
         {% when 'contact' %}
           <div class="contact col-footer">
             <div class="title-footer">
@@ -83,10 +73,10 @@
             <div class="title-footer">
               {{ block.settings.heading }}
             </div>
-            <div class="wrapper wapper-payment">
+            <div class="wrapper wrapper-payment">
               <ul>
                 {% for block_payment in section.blocks %}
-                  {% if block_payment.type =='pagamento' %}
+                  {% if block_payment.type =='pagamento_img' %}
                     <li>
                       {% if block_payment.settings.payment_img != blank %}
                         {{ block_payment.settings.payment_img | image_url: width: 33, height: 20 | image_tag }}
@@ -299,11 +289,16 @@
       "name": "Pagamento",
       "settings": [
         {
-          "type": "richtext",
-          "id": "heading",
-          "label": "Título",
-          "default": "<h4>Contato</h4>"
-        },
+          "type": "image_picker",
+          "id": "payment_img",
+          "label": "Pagamento imagens"
+        }
+      ]
+    },
+    {
+      "type": "pagamento_img",
+      "name": "Pagamento Image",
+      "settings": [
         {
           "type": "image_picker",
           "id": "payment_img",
