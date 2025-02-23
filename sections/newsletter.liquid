@@ -5,6 +5,7 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background: {{ section.settings.background_section_color }}
   }
 
   @media screen and (min-width: 750px) {
@@ -140,18 +141,6 @@
       "id": "background_section_color",
       "label": "Cor do background da seção",
       "default": "radial-gradient(50% 50% at 50% 50%, #8FD83B 0%, #B4FA64 100%)"
-    },
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "Titulo newsletter",
-      "default": "<h3>Obtén 10% de descuento en tu primera compra</h3>"
-    },
-    {
-      "type": "richtext",
-      "id": "subtitle",
-      "label": "Titulo newsletter",
-      "default": "<p>Recibe también contenido y promociones exclusivas en tu correo.</p>"
     },
     {
       "type": "checkbox",
