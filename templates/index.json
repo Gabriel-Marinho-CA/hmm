@@ -279,7 +279,7 @@
         "background_section_color": "#ff4375",
         "text_color": "#ffffff",
         "padding_top": 24,
-        "padding_bottom": 24
+        "padding_bottom": 0
       }
     },
     "video_slider_by_turbo_Cg3Trf": {
