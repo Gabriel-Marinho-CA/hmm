@@ -70,6 +70,10 @@
             "heading": "<p>Ayuda</p>",
             "menu": "ayuda"
           }
+        },
+        "pagamento_MHYwWj": {
+          "type": "pagamento",
+          "settings": {}
         }
       },
       "block_order": [
@@ -80,7 +84,8 @@
         "socias_DiATAh",
         "socias_GzNzqf",
         "link_list_PUbb76",
-        "link_list_tEWFtn"
+        "link_list_tEWFtn",
+        "pagamento_MHYwWj"
       ],
       "settings": {
         "copyright_text": "",
