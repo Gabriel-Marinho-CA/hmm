@@ -192,6 +192,10 @@
   }
 }
 
+.extra-footer-copy {
+  border-top: 1px solid #00000014;
+}
+
 .wrapper-extra-footer {
   display: flex;
   align-items: center;
