@@ -24,11 +24,14 @@
         {% when 'logo' %}
           <div class="logo-wrapper">
             <div class="logo-footer" style="max-width: {{ block.settings.width }}px;">
-              {{
-                block.settings.logo
-                | image_url: width: block.settings.logo.width, height: block.settings.logo.height
-                | image_tag: loading: 'lazy'
-              }}
+              {% if block.settings.logo != blank %}
+                {{
+                  block.settings.logo
+                  | image_url: width: block.settings.logo.width, height: block.settings.logo.height
+                  | image_tag: loading: 'lazy'
+                }}
+              {% endif %}
+  
             </div>
             {% if block.settings.text_rodape != blank %}
               <div class="text-logo">
@@ -60,11 +63,14 @@
                   {% if block_insta.type == 'socias' %}
                     <li>
                       <a href="{{ block_insta.settings.link_social }}" target="_blank">
-                        {{
-                          block_insta.settings.img_social
-                          | image_url: width: 20, height: 20
-                          | image_tag: loading: 'lazy'
-                        }}
+                        {% if block_insta.settings.img_social != blank %}
+                          {{
+                            block_insta.settings.img_social
+                            | image_url: width: 20, height: 20
+                            | image_tag: loading: 'lazy'
+                          }}
+                        
+                        {% endif %}
                       </a>
                     </li>
                   {% endif %}
