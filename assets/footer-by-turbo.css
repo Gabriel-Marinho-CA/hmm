@@ -60,7 +60,6 @@
       margin-bottom: 12px;
 
       * {
-        font-family: "Quicksand";
         font-size: 14px;
         font-weight: 700;
         line-height: 17.5px;
@@ -91,7 +90,6 @@
       }
 
       label {
-        font-family: "Poppins";
         font-size: 15px;
         font-weight: 400;
         line-height: 26px;
@@ -108,7 +106,6 @@
       button {
         background: #191970;
         border-radius: 200px;
-        font-family: "Poppins";
         font-size: 14px;
         font-weight: 600;
         line-height: 21px;
@@ -128,7 +125,6 @@
     margin-bottom: 16px;
 
     * {
-      font-family: "Poppins";
       font-size: 16px;
       font-weight: 700;
       line-height: 24px;
@@ -143,7 +139,6 @@
     .content-contact {
       margin-bottom: 16px;
       * {
-        font-family: Poppins;
         font-size: 14px;
         font-weight: 400;
         line-height: 18.2px;
@@ -197,7 +192,6 @@
     padding-top: 1rem;
   }
   .left-copy * {
-    font-family: "Poppins";
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -211,7 +205,6 @@
     }
   }
   .right a {
-    font-family: "Poppins";
     font-size: 16px;
     font-weight: 400;
     line-height: 20.8px;
