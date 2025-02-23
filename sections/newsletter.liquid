@@ -33,6 +33,19 @@
           max-width: 100%;
         }
       }
+
+  .form-wrapper {
+    margin:0;
+
+    .field {
+      &::before,
+      &::after {
+        box-shadow: none !important;
+        border:none !important;
+      }
+      
+    }
+  }
   }
 </style>
 
@@ -71,7 +84,7 @@
         {%- when '@app' -%}
           {% render block %}
         {%- when 'email_form' -%}
-          <div {{ block.shopify_attributes }}>
+          <div {{ block.shopify_attributes }} class="form-wrapper">
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div
