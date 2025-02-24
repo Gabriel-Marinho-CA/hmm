@@ -1932,6 +1932,12 @@ a.product__text {
 }
 
 media-gallery {
+
+  & .product__modal-opener {
+    .product__media {
+      background-color: #F8F8FA;
+    }
+  }
   @media (max-width: 1000px) {
     position: relative;
     & .slider-button {
@@ -1943,6 +1949,7 @@ media-gallery {
       & .product__media {
         position: initial;
         padding: 0 !important;
+
 
         & img {
           position: initial !important;
