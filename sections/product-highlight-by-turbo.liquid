@@ -13,86 +13,89 @@
 {% endstyle %}
 
 <style>
-    .product-highlight.section-{{ section.id }}-padding {
-      position:relative;
-      z-index:0;
-      background-color:{{ section.settings.bg_color }};
-      &::before {
-          position: absolute;
-          top: 0;
-          left:0;
-          z-index: -1;
-          content:"";
-          width: 100%;
-          height: 100%;
-          background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
-          background-repeat: round;
-      }
-
-      .wrapper {
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-        justify-content: space-between;
-        position:relative;
-      }
-
-      * {
-          line-height: 1;
-          margin:0;
-          color: {{ section.settings.text_color }};
-      }
-
-      strong {
-          color: {{ section.settings.strong_color }};
-      }
-      .hgl-text {
-        color: {{ section.settings.strong_color }};
-        font-size:24px;
-        font-weight:600;
-        border: 2px solid {{ section.settings.strong_color }};
-        padding: 1rem;
-        border-radius:24px;
-        text-align:center;
-      }
-
-      .icon-top-left {
+  .product-highlight.section-{{ section.id }}-padding {
+    position:relative;
+    z-index:0;
+    background-color:{{ section.settings.bg_color }};
+    &::before {
         position: absolute;
-        top:0;
+        top: 0;
         left:0;
-      }
-      .title-hgl {
-          * {
-              font-size: 78px;
-              letter-spacing: 1.5px;
-          }
-          strong {
-              font-weight: 400;
-          }
-      }
-      .subtitle-hgl {
-        margin-top: 3rem;
-         margin-bottom: 5rem;
-         * {
-             font-size: 22px;
-         }
+        z-index: -1;
+        content:"";
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
+        background-repeat: round;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      justify-content: space-between;
+      position:relative;
+    }
+
+    * {
+        line-height: 1;
+        margin:0;
+        color: {{ section.settings.text_color }};
+    }
+
+    strong {
+        color: {{ section.settings.strong_color }};
+    }
+    .hgl-text {
+      * {
+          color: {{ section.settings.strong_color }};
+      font-size:24px;
+      font-weight:600;
+      border: 2px solid {{ section.settings.strong_color }};
+      padding: 1rem;
+      border-radius:24px;
+      text-align:center;
       }
 
-      .buy-btn-hgl {
-        a {
-            max-width:332px;
-           font-size: 32px;
-           font-weight: 700;
-           text-decoration: none;
-           border-radius: 32px;
-           height: 68px;
-           padding-inline: 1.5rem;
-           display: flex;
-           justify-content: center;
-           align-items: center;
+    }
+
+    .icon-top-left {
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    .title-hgl {
+        * {
+            font-size: 78px;
+            letter-spacing: 1.5px;
         }
+        strong {
+            font-weight: 400;
+        }
+    }
+    .subtitle-hgl {
+      margin-top: 3rem;
+       margin-bottom: 5rem;
+       * {
+           font-size: 22px;
+       }
+    }
+
+    .buy-btn-hgl {
+      a {
+          max-width:332px;
+         font-size: 32px;
+         font-weight: 700;
+         text-decoration: none;
+         border-radius: 32px;
+         height: 68px;
+         padding-inline: 1.5rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
     }
+  }
 </style>
 
 <div
@@ -102,13 +105,12 @@
   {% endif %}
 >
   <div class="pdp_highlight page-width">
-
     <div class="wrapper">
-        <div class="icon-top-left">
-            {% if section.settings.icon_top_left != blank %}
-              {{ section.settings.icon_top_left | image_url: width: 60, height: 60 | image_tag }}
-            {% endif %}
-          </div>
+      <div class="icon-top-left">
+        {% if section.settings.icon_top_left != blank %}
+          {{ section.settings.icon_top_left | image_url: width: 60, height: 60 | image_tag }}
+        {% endif %}
+      </div>
       <div class="left">
         <div class="title-hgl">
           {{ section.settings.title }}
