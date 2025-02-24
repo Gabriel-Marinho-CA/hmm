@@ -240,9 +240,7 @@ if (!customElements.get('product-info')) {
       }
 
       updateMedia(html, variantFeaturedMediaId) {
-        console.log("!!!!!!")
         if (!variantFeaturedMediaId) return;
-        console.log("@@@@");
 
         const mediaGallerySource = this.querySelector('media-gallery ul');
         const mediaGalleryDestination = html.querySelector(`media-gallery ul`);

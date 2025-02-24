@@ -1158,13 +1158,11 @@ class VariantSelects extends HTMLElement {
     const modalContent = document.querySelector(
       `#ProductModal-${this.dataset.section} .product-media-modal__content`
     );
-    console.log("@@@@",modalContent);
     
     if (!modalContent) return;
     const newMediaModal = modalContent.querySelector(
       `[data-media-id="${this.currentVariant.featured_media.id}"]`
     );
-    console.log("@@@@",newMediaModal);
     
     modalContent.prepend(newMediaModal);
   }
