@@ -630,11 +630,7 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% if section.settings.kit %}
-                  {% render 'kits-variants', product: product %}
-                {% else %}
                   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-                {% endif %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
