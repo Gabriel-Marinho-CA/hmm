@@ -70,8 +70,7 @@
         "text_C8byG9"
       ],
       "custom_css": [
-        ".content-container {position: relative;}",
-        ".content-container::before {}"
+        ".content-container {position: relative;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -184,6 +183,15 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_liquid_thJE9m": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>.content-container::before {\ncontent: \"\";\n  display: block;\n  width: 100%;\n  height: 100%;\n  background-image:\"url(https://rosa-latina-dev.myshopify.com/cdn/shop/files/Group_40075.png?crop=center&height=192&v=1740265203&width=152)\";\n  background-size: cover;\n  background-position: center;\n}</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -192,6 +200,7 @@
     "rich_text_wtcVcR",
     "collapsible_content_AT844J",
     "instagram_section_by_turbo_kmXpAK",
-    "newsletter_VDwrEk"
+    "newsletter_VDwrEk",
+    "custom_liquid_thJE9m"
   ]
 }
