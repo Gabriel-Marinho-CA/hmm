@@ -30,11 +30,12 @@
             "show_gift_card_recipient": false
           }
         },
-        "extra_info_c3D9pT": {
-          "type": "Extra_info",
+        "extra_info_wnWb7V": {
+          "type": "extra_info",
           "settings": {
-            "title_extra_info": "<p>oi</p>",
-            "subtitle_extra_info": "<p>ola</p>"
+            "icon_extra_info": "shopify://shop_images/Layer_1_1f0ef327-dc89-48d1-b513-fab726e0470a.png",
+            "title_extra_info": "<p>Frete Grátis</p>",
+            "subtitle_extra_info": "<p>acima de R$300</p>"
           }
         }
       },
@@ -42,7 +43,7 @@
         "title",
         "variant_picker",
         "buy_buttons",
-        "extra_info_c3D9pT"
+        "extra_info_wnWb7V"
       ],
       "settings": {
         "section_id": "produto",
