@@ -84,28 +84,30 @@
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
-    {% comment %} <div class="desktop-custom-cards">
-      <ul class="list-custom-cards">
-        {% for item in section.blocks %}
-          {% if item.type == 'card' %}
-            <li class="card-wrapper">
-              {% if item.settings.link != blank %}
-                <a class="link-card" href="{{ item.settings.link }}"></a>
-              {% endif %}
-              {% if item.settings.image != blank %}
-                <div class="image-card" style="--bg-color:{{ item.settings.bg_color }}">
-                  {{ item.settings.image | image_url: width: 416, height: 400 | image_tag }}
+    {% comment %}
+      <div class="desktop-custom-cards">
+        <ul class="list-custom-cards">
+          {% for item in section.blocks %}
+            {% if item.type == 'card' %}
+              <li class="card-wrapper">
+                {% if item.settings.link != blank %}
+                  <a class="link-card" href="{{ item.settings.link }}"></a>
+                {% endif %}
+                {% if item.settings.image != blank %}
+                  <div class="image-card" style="--bg-color:{{ item.settings.bg_color }}">
+                    {{ item.settings.image | image_url: width: 416, height: 400 | image_tag }}
+                  </div>
+                {% endif %}
+                <div class="info-card">
+                  <div class="title-card">{{ item.settings.title }}</div>
+                  <div class="subtitle-card">{{ item.settings.subtitle }}</div>
                 </div>
-              {% endif %}
-              <div class="info-card">
-                <div class="title-card">{{ item.settings.title }}</div>
-                <div class="subtitle-card">{{ item.settings.subtitle }}</div>
-              </div>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div> {% endcomment %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endcomment %}
     <div class="swiper mobile-custom-cards">
       <ul class="list-custom-cards swiper-wrapper">
         {% for item in section.blocks %}
@@ -132,21 +134,40 @@
 </div>
 
 <script>
+  if (window.innerWidth > 1000) {
     new Swiper('.section-{{ section.id }}-padding .swiper', {
-    spaceBetween: 16,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    breakpoints: {
-      767: {
-        slidesPerView: 'auto',
-        spaceBetween: 40,
-        centeredSlides: true,
+      spaceBetween: 16,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      breakpoints: {
+        767: {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          centeredSlides: true,
+        },
+        992: {
+          spaceBetween: 40,
+        },
       },
-      992: {
-        spaceBetween: 40,
+    });
+  } else {
+    new Swiper('.section-{{ section.id }}-padding .swiper', {
+      spaceBetween: 16,
+      slidesPerView: 1.4,
+      centeredSlides: true,
+      breakpoints: {
+        767: {
+          slidesPerView: 2.2,
+          spaceBetween: 16,
+          centeredSlides: true,
+        },
+        992: {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+        },
       },
-    },
-  });
+    });
+  }
 </script>
 {% schema %}
 {
