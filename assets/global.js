@@ -1143,11 +1143,7 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant) return;
-    console.log("kollee 1")
-
     if (!this.currentVariant.featured_media) return;
-
-    console.log("kollee 2")
 
     const mediaGalleries = document.querySelectorAll(
       `[id^="MediaGallery-${this.dataset.section}"]`
@@ -1162,10 +1158,14 @@ class VariantSelects extends HTMLElement {
     const modalContent = document.querySelector(
       `#ProductModal-${this.dataset.section} .product-media-modal__content`
     );
+    console.log("@@@@",modalContent);
+    
     if (!modalContent) return;
     const newMediaModal = modalContent.querySelector(
       `[data-media-id="${this.currentVariant.featured_media.id}"]`
     );
+    console.log("@@@@",newMediaModal);
+    
     modalContent.prepend(newMediaModal);
   }
 
