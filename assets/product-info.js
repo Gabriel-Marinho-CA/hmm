@@ -1,4 +1,6 @@
 if (!customElements.get('product-info')) {
+  console.log("dkaspokdpasd");
+  
   customElements.define(
     'product-info',
     class ProductInfo extends HTMLElement {
@@ -427,4 +429,6 @@ if (!customElements.get('product-info')) {
       }
     }
   );
+} else {
+  console.log("CARAA");
 }
