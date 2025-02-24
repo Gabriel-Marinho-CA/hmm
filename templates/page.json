@@ -32,12 +32,12 @@
         "heading_b7LcVt"
       ],
       "custom_css": [
-        ".banner__heading {font-size: 72px; color: #fff; line-height: 1;}"
+        ".banner__heading {max-width:552px; font-size: 72px; color: #fff; line-height: 1;}"
       ],
       "settings": {
         "image": "shopify://shop_images/IMG.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
