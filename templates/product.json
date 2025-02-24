@@ -217,12 +217,54 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "list_cards_by_turbo_F9WWzy": {
+      "type": "list-cards-by-turbo",
+      "blocks": {
+        "card_awRVTM": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#b368eb",
+            "link": "",
+            "image": "shopify://shop_images/woman-wearing-sundress_3_-Photoroom_1.png",
+            "title": "<p>Crecimiento acelerado</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
+        },
+        "card_XAFGqf": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#ff6419",
+            "link": "",
+            "image": "shopify://shop_images/young-beautiful-hispanic-woman-standing-with-arms-crossed-gesture-coffee-shop-terrace_1.png",
+            "title": "<p>Fuerza y volumen inmediato</p>",
+            "subtitle": "<p>Nuestra fórmula estimula el crecimiento capilar 6 veces más rápido, dejando tu cabello más largo y saludable.</p>"
+          }
+        },
+        "card_NTUiHg": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#b4fa64",
+            "link": "",
+            "image": "shopify://shop_images/woman-wearing-sundress_4_-Photoroom_1.png",
+            "title": "<p>Belleza completa</p>",
+            "subtitle": "<p>Además del cabello, Rosa Hair nutre la piel y fortalece las uñas.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_awRVTM",
+        "card_XAFGqf",
+        "card_NTUiHg"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "related-products",
     "multicolumn_hcbreb",
-    "rich_text_mYqCjJ"
+    "rich_text_mYqCjJ",
+    "list_cards_by_turbo_F9WWzy"
   ]
 }
