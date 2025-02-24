@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,9 +15,121 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_k4UNKq": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_b7LcVt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Belleza y fuerza desde la raíz",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b7LcVt"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_wtcVcR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gMBcKV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sobre Nosotros",
+            "heading_size": "h1"
+          }
+        },
+        "text_C8byG9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rosa Latina nació para empoderar a las mujeres latinoamericanas, ayudándolas a recuperar la fuerza, la belleza y la confianza en su cabello. Sabemos que la caída capilar puede afectar la autoestima, por eso creamos una solución práctica, efectiva y deliciosa para transformar esa realidad.Con fórmulas enriquecidas con colágeno, biotina y vitaminas esenciales, nuestros suplementos han sido desarrollados para actuar desde el interior, fortaleciendo el cabello, acelerando el crecimiento y nutriendo la piel y las uñas. Más que un suplemento, ofrecemos un ritual diario de belleza.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gMBcKV",
+        "text_C8byG9"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_AT844J": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_YmTR74": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Misión",
+            "icon": "none",
+            "row_content": "<p>Crear productos que valoren la belleza única de cada mujer, ofreciendo soluciones eficaces y accesibles para un cabello más fuerte, saludable y lleno de vida.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Jef8YV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Visión",
+            "icon": "none",
+            "row_content": "<p>Ser la marca de referencia en suplementación capilar para mujeres latinoamericanas, promoviendo confianza, autoestima y belleza auténtica.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MGqkhU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Valores",
+            "icon": "none",
+            "row_content": "<p>Autenticidad – Celebramos la individualidad y diversidad de la belleza femenina. Confianza – Fórmulas desarrolladas con respaldo científico y eficacia comprobada. Empoderamiento – Productos que van más allá de la estética, fortaleciendo la autoestima y el bienestar. Compromiso – Calidad, innovación y transparencia en cada detalle.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YmTR74",
+        "collapsible_row_Jef8YV",
+        "collapsible_row_MGqkhU"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_k4UNKq",
+    "rich_text_wtcVcR",
+    "collapsible_content_AT844J"
   ]
 }
