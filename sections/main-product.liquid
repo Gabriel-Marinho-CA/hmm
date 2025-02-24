@@ -730,24 +730,12 @@
         assign seo_media = product.featured_media
       endif
     -%}
-
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
   </div>
-  {% assign has_extra_info = false %}
-  {% for block in section.blocks %}
-    {% if block.type == 'Extra_info' %}
-      {% assign has_extra_info = true %}
-    {% endif %}
-  {% endfor %}
 </product-info>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.product__accordion').style.borderTop = '0px';
-  });
-</script>
 
 {% schema %}
 {
