@@ -258,6 +258,17 @@
         "card_NTUiHg"
       ],
       "settings": {}
+    },
+    "deals_bar_by_turbo_MYCaPP": {
+      "type": "deals-bar-by-turbo",
+      "settings": {
+        "id_section": "",
+        "infinite_scroll": true,
+        "background_section_color": "#fff",
+        "text_color": "#191970",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -265,6 +276,7 @@
     "related-products",
     "multicolumn_hcbreb",
     "rich_text_mYqCjJ",
-    "list_cards_by_turbo_F9WWzy"
+    "list_cards_by_turbo_F9WWzy",
+    "deals_bar_by_turbo_MYCaPP"
   ]
 }
