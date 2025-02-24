@@ -146,11 +146,11 @@
             }
           }
           & .close svg {
-              color:#fff;
+            color:#FF4375;
           }
 
           & .open svg{
-           color:#0B2F6F;
+           color:#FF4375;
         }
 
         }
@@ -199,9 +199,12 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient section-drop-{{ section.id }}" {% if section.settings.id_section %}
-  id="{{ section.settings.id_section |  handleize}}"
-{% endif %}>
+<div
+  class="color-{{ section.settings.color_scheme }} gradient section-drop-{{ section.id }}"
+  {% if section.settings.id_section %}
+    id="{{ section.settings.id_section |  handleize}}"
+  {% endif %}
+>
   <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
     <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
       <div class="page-width custom-collapse-section">
