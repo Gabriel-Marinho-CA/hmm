@@ -453,6 +453,91 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "faq_by_turbo_CgUXxw": {
+      "type": "faq-by-turbo",
+      "blocks": {
+        "collapsible_row_pMwtxE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo debo tomar Rosa Hair?",
+            "icon": "none",
+            "row_content": "<p>Toma solo una gomita al día para fortalecer tu cabello, piel y uñas desde el interior.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_e6jGJQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cuándo notaré los resultados?",
+            "icon": "none",
+            "row_content": "<p>Los primeros cambios pueden verse en pocas semanas, pero el uso continuo garantiza un cabello más fuerte, voluminoso y saludable.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Fjm6hb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Rosa Hair realmente estimula el crecimiento capilar?",
+            "icon": "none",
+            "row_content": "<p>Sí. Su fórmula avanzada estimula el crecimiento 6 veces más rápido y reduce la caída hasta en un 96%.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GRjLqN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿También mejora la piel y las uñas?",
+            "icon": "none",
+            "row_content": "<p>Sí. El colágeno y las vitaminas esenciales aportan firmeza e hidratación a la piel, además de fortalecer las uñas.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8Hji8m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Puedo tomar más de una gomita al día?",
+            "icon": "none",
+            "row_content": "<p>No es necesario. La fórmula ha sido diseñada para ofrecer el máximo beneficio con solo una gomita diaria.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WtTNgr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Tiene contraindicaciones?",
+            "icon": "none",
+            "row_content": "<p>Rosa Hair es seguro, pero las personas embarazadas, en período de lactancia o con condiciones médicas deben consultar a un médico antes de consumirlo.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_pMwtxE",
+        "collapsible_row_e6jGJQ",
+        "collapsible_row_Fjm6hb",
+        "collapsible_row_GRjLqN",
+        "collapsible_row_8Hji8m",
+        "collapsible_row_WtTNgr"
+      ],
+      "settings": {
+        "id_section": "",
+        "caption": "",
+        "heading": "<p>Preguntas Frecuentes</p>",
+        "bg_iamge": "shopify://shop_images/rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_ros.png",
+        "background_section_color": "#A65AE6",
+        "title_section_color": "#fff",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -466,6 +551,7 @@
     "image_banner_UiMzmk",
     "instagram_section_by_turbo_nFtAih",
     "newsletter_a9Dn7e",
-    "product_highlight_by_turbo_L8CndU"
+    "product_highlight_by_turbo_L8CndU",
+    "faq_by_turbo_CgUXxw"
   ]
 }
