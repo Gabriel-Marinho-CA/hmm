@@ -382,6 +382,18 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "instagram_section_by_turbo_nFtAih": {
+      "type": "instagram-section-by-turbo",
+      "settings": {
+        "id_section": "",
+        "title": "<p>Síguenos en Instagram</p>",
+        "instagram_title": "@instagram",
+        "instagram_link": "",
+        "title_section_color": "#ff4375",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -392,6 +404,7 @@
     "list_cards_by_turbo_F9WWzy",
     "deals_bar_by_turbo_MYCaPP",
     "video_slider_by_turbo_amVFF3",
-    "image_banner_UiMzmk"
+    "image_banner_UiMzmk",
+    "instagram_section_by_turbo_nFtAih"
   ]
 }
