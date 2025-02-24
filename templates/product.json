@@ -29,12 +29,20 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "extra_info_c3D9pT": {
+          "type": "Extra_info",
+          "settings": {
+            "title_extra_info": "<p>oi</p>",
+            "subtitle_extra_info": "<p>ola</p>"
+          }
         }
       },
       "block_order": [
         "title",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "extra_info_c3D9pT"
       ],
       "settings": {
         "section_id": "produto",
@@ -49,7 +57,7 @@
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
-        "hide_variants": true,
+        "hide_variants": false,
         "enable_video_looping": false,
         "installments_text": "Hasta 12x sin intereses",
         "installment_icon": "shopify://shop_images/Layer_1_1.png",
