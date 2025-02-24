@@ -310,7 +310,9 @@ a.product__text {
     font-size: 26px;
   }
 }
-
+.product__title {
+  margin-bottom: 2rem;
+}
 .product__title > a {
   display: none;
 }
