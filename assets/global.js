@@ -1142,6 +1142,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
+    console.log("kolleeee")
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 
