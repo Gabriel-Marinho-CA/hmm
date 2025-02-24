@@ -239,10 +239,10 @@
         "text_4fYj8p"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%; min-width: 100%;}",
+        ".rich-text__wrapper {width: 100%;}",
         ".rich-text__blocks {display: flex; align-items: center; max-width: 100%; gap: 3rem;}",
-        ".rich-text__heading {font-size: 56px; letter-spacing: 1.12px; color: #272727;}",
-        ".rich-text__text * {font-size: 30px; color: #242323;}"
+        ".rich-text__heading {font-size: 56px; letter-spacing: 1.12px; color: #272727; line-height: 1;}",
+        ".rich-text__text * {font-size: 28px; color: #242323; line-height: 1;}"
       ],
       "settings": {
         "desktop_content_position": "left",
