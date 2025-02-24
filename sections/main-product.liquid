@@ -467,6 +467,25 @@
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
                 %}
+                {% when 'extra_info' %}
+                  <div class="wrapper-extra-info-pdp">
+                      <ul>
+                        {% for item in section.blocks %}
+                            {% if item.type == 'extra_info' %}
+
+                                {% if item.icon_extra_info != blank %}
+                                  {{ item.icon_extra_info | image_url: width: 40, height: 40 |  image_tag}}
+                                {% endif %}
+                                <div class="title-extra-info">
+                                    {{ item.title_extra_info }}
+                                </div>
+                                <div class="subtitle-extra-info">
+                                    {{ item.subtitle_extra_info }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                      </ul>
+                  </div>
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, pix_percent:section.settings.pix_percent%}
@@ -859,7 +878,7 @@
       ]
     },
     {
-      "type": "Extra_info",
+      "type": "extra_info",
       "name": "Informações extra",
       "limit": 4,
       "settings": [
