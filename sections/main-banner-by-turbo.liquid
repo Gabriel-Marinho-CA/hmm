@@ -6,37 +6,37 @@
   .slideshow__media {
     display: none;
   }
-  @media (min-width:767px) {
-    .slideshow__media.banner__media.media.desktop{
-      display:block !important;
+  @media (min-width: 767px) {
+    .slideshow__media.banner__media.media.desktop {
+      display: block !important;
     }
   }
-  @media (max-width:766px) {
-    .slideshow__media.banner__media.media.mobile{
-      display:block !important;
+  @media (max-width: 766px) {
+    .slideshow__media.banner__media.media.mobile {
+      display: block !important;
     }
 
-    @media (max-width:766px) {
-      .custom-slideshow-{{ section.id }} {
-      .custom-card-item.grid__item {
-        margin-left: 0rem !important;
-        max-width: 86vw !important;
+    @media (max-width: 766px) {
+      .custom-slideshow {
+        .custom-card-item.grid__item {
+          margin-left: 0rem !important;
+          max-width: 86vw !important;
+        }
+
+        .slideshow__text-wrapper {
+          display: none;
+        }
+        .slideshow__media {
+          height: auto !important;
+        }
+        .slideshow__media img {
+          position: initial !important;
+          height: auto !important;
+        }
       }
       .slider-buttons {
-        display:none !important;
-      }
-
-          .slideshow__text-wrapper {
-            display: none;
-          }
-          .slideshow__media{
-            height: auto !important;
-          }
-          .slideshow__media img {
-            position: initial !important;
-            height: auto !important;
-          }
-      }
+          display: none !important;
+        }
     }
   }
 </style>
@@ -65,7 +65,7 @@
 {%- endif -%}
 
 <slideshow-component
-  class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} custom-slideshow-{{ section.id }}"
+  class="custom-slideshow slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} "
   role="region"
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}"
