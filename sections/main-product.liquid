@@ -15,6 +15,7 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'component-new-variants-section.css' | asset_url | stylesheet_tag }}
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
@@ -53,6 +54,32 @@
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if(window.innerWidth <= 750) {
+        document.querySelector('.footer').style.paddingTop = '0px';
+        document.querySelector('.footer__blocks-wrapper').style.paddingTop = '1.5rem';
+      }
+    });
+  </script>
+  <script>
+    function adjustCardHeight(card) {
+      if (!card.classList.contains('variant-height--js')) {
+        if (card.children[0].classList.contains('card-variant')) {
+          const height = card.children[1].querySelector(':scope> .card__content').clientHeight;
+          if (window.location.pathname.indexOf('collections') >= 0) {
+            const cardCollectionPosition = Math.abs(height - card.children[0].clientHeight);
+            card.children[0].style.bottom = `${cardCollectionPosition}px`;
+            card.classList.add('variant-height--js');
+          } else {
+            card.children[0].style.bottom = `${height}px`;
+            card.classList.add('variant-height--js');
+          }
+        }
+      }
+    }
+  </script>
+
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
     {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -73,6 +100,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
@@ -110,10 +138,14 @@
                   {%- render 'price',
                     product: product,
                     use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
+                    show_badges: false,
+                    price_class: 'price--large',
+                    parcels: true,
+                    parcels_number: 5,
+                    kit: section.settings.kit
                   -%}
                 </div>
+
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -191,12 +223,148 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
+              {%- when 'destaques' -%}
+                {% assign metaobject_highlight_product = product.metafields.custom.destaques_produto %}
+                {% if metaobject_highlight_product %}
+                  <div class="wrapper-highlights-product-by-turbo">
+                    {% for i in (1..3) %}
+                      {% assign text_highlight = 'texto_destaque_' | append: i %}
+                      {% assign image_highlight = 'imagem_destaque_' | append: i %}
+
+                      <div class="highlights-product-by-turbo">
+                        {{
+                          metaobject_highlight_product.value[image_highlight]
+                          | image_url: width: 40, height: 40
+                          | image_tag: loading: 'lazy'
+                        }}
+                        <p>{{ metaobject_highlight_product.value[text_highlight] }}</p>
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+              {%- when 'tecnology' -%}
+                {% assign tecnology_images = product.metafields.custom.image_tecnologia %}
+                {% assign tecnology_text = product.metafields.custom.texto_tecnologia %}
+                {% assign tecnology_size = tecnology_text.value.size | minus: 1 %}
+
+                {% if tecnology_images or tecnology_text %}
+                  {% if tecnology_images %}
+                    {% assign tec_images_arr = '' | split: '' %}
+                    {% for image_tec in tecnology_images.value %}
+                      {% assign image_tec_in_array = image_tec | sort %}
+                      {% assign tec_images_arr = tec_images_arr | concat: image_tec_in_array %}
+                    {% endfor %}
+                  {% endif %}
+                  <div
+                    class="product__accordion accordion-by-turbo accordion quick-add-hidden"
+                    {{ block.shopify_attributes }}
+                  >
+                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                      <summary>
+                        <div class="summary__title">
+                          <h2 class="h4 accordion__title">Tecnologia</h2>
+                        </div>
+                        <div class="detail-plus">
+                          {% render 'icon-plus' %}
+                        </div>
+                        <div class="detail-minus">
+                          {% render 'icon-minus' %}
+                        </div>
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        <ul class="tecnology-wrapper-turbo">
+                          {% for i in (0..tecnology_size) %}
+                            <li>
+                              {% if tec_images_arr[i] %}
+                                <div class="wrapper-image">
+                                  {{
+                                    tec_images_arr[i]
+                                    | image_url: width: tec_images_arr[i].width, height: tec_images_arr[i].height
+                                    | image_tag: loading: 'lazy'
+                                  }}
+                                </div>
+                              {% endif %}
+                              {% if tecnology_text.value[i] %}
+                                <p>
+                                  {{ tecnology_text.value[i] }}
+                                </p>
+                              {% endif %}
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+                {% endif %}
+
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+                  <div
+                    class="product__accordion accordion-by-turbo accordion quick-add-hidden"
+                    {{ block.shopify_attributes }}
+                  >
+                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                      <summary>
+                        <div class="summary__title">
+                          <h2 class="h4 accordion__title">Descrição</h2>
+                        </div>
+                        <div class="detail-plus">
+                          {% render 'icon-plus' %}
+                        </div>
+                        <div class="detail-minus">
+                          {% render 'icon-minus' %}
+                        </div>
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        <div class="product__description rte quick-add-hidden">
+                          {{ product.description }}
+                        </div>
+                      </div>
+                    </details>
                   </div>
                 {%- endif -%}
+
+                {% if product.metafields.custom.tabela_de_medidas != blank %}
+                  <div
+                    class="product__accordion accordion-by-turbo accordion quick-add-hidden"
+                    {{ block.shopify_attributes }}
+                  >
+                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                      <summary>
+                        <div class="summary__title">
+                          <h2 class="h4 accordion__title">Tabela de medidas</h2>
+                        </div>
+                        <div class="detail-plus">
+                          {% render 'icon-plus' %}
+                        </div>
+                        <div class="detail-minus">
+                          {% render 'icon-minus' %}
+                        </div>
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        <div class="product__table_size rte quick-add-hidden">
+                          <div class="size-chart-content">
+                            {% assign table_image = product.metafields.custom.tabela_de_medidas %}
+                            {{
+                              table_image
+                              | image_url: width: 720
+                              | image_tag: loading: 'lazy', alt: table_image.alt
+                              | escape
+                            }}
+
+                            {% if product.metafields.custom.medidas_do_modelo != blank %}
+                              <p class="model-size">
+                                {{ product.metafields.custom.medidas_do_modelo.value }}
+                              </p>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                {% endif %}
+
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -462,14 +630,19 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% if section.settings.kit %}
+                  {% render 'kits-variants', product: product %}
+                {% else %}
+                  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% endif %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
                   product_form_id: product_form_id,
                   section_id: section.id,
-                  show_pickup_availability: true
+                  show_pickup_availability: true,
+                  kit: section.settings.kit
                 -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
@@ -578,7 +751,7 @@
                                       {%- else -%}
                                         {% assign quick_add = 'none' %}
                                       {%- endif -%}
-                                      {% render 'card-product',
+                                      {% render 'card-product-complementary-by-turbo',
                                         card_product: product,
                                         media_aspect_ratio: block.settings.image_ratio,
                                         show_secondary_image: false,
@@ -919,6 +1092,15 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "destaques",
+      "name": "Destaques",
+      "limit": 1
+    },
+    {
+      "type": "tecnology",
+      "name": "Tecnologia"
     },
     {
       "type": "share",
@@ -2077,6 +2259,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "kit",
+      "default": false,
+      "label": "Este produto é um kit"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
