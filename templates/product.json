@@ -394,6 +394,40 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "newsletter_a9Dn7e": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_RYkfq3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Obtén 10% de descuento en tu primera compra",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_z3yXtL": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Recibe también contenido y promociones exclusivas en tu correo.</p>"
+          }
+        },
+        "email_form_excHHM": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_RYkfq3",
+        "paragraph_z3yXtL",
+        "email_form_excHHM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "background_section_color": "radial-gradient(rgba(143, 216, 59, 1), rgba(180, 250, 100, 1) 100%)",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -405,6 +439,7 @@
     "deals_bar_by_turbo_MYCaPP",
     "video_slider_by_turbo_amVFF3",
     "image_banner_UiMzmk",
-    "instagram_section_by_turbo_nFtAih"
+    "instagram_section_by_turbo_nFtAih",
+    "newsletter_a9Dn7e"
   ]
 }
