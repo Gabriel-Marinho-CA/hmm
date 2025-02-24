@@ -67,8 +67,11 @@
         "share"
       ],
       "settings": {
+        "section_id": "produto",
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
+        "pix_percent": 5,
+        "pix_text": "[pix_value] no pix",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -78,6 +81,10 @@
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
+        "installments_text": "Hasta 12x sin intereses",
+        "installment_icon": "shopify://shop_images/Layer_1_1.png",
+        "safe_text": "Pago 100% seguro",
+        "safe_icon": "shopify://shop_images/Frame_be631dea-01ef-412e-a081-894de7ebeb1b.png",
         "padding_top": 36,
         "padding_bottom": 12
       }
