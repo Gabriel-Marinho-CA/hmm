@@ -741,10 +741,6 @@
       {% assign has_extra_info = true %}
     {% endif %}
   {% endfor %}
-
-  {% if has_extra_info %}
-    {% render 'extra-info-with-figure', block: section.block, image_figure: section.settings.imagem_figure %}
-  {% endif %}
 </product-info>
 
 <script>
@@ -2150,11 +2146,6 @@
       "type": "header",
       "content": "t:sections.main-product.settings.header.content",
       "info": "t:sections.main-product.settings.header.info"
-    },
-    {
-      "type": "image_picker",
-      "id": "imagem_figure",
-      "label": "Imagem do mascote"
     },
     {
       "type": "number",
