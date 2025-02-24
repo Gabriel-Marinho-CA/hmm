@@ -394,6 +394,9 @@
     },
     "image_banner_UiMzmk": {
       "type": "image-banner",
+      "custom_css": [
+        ".banner {margin-bottom: -3px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Frame_1261153344.png",
         "image_overlay_opacity": 0,
@@ -406,52 +409,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
-      }
-    },
-    "instagram_section_by_turbo_nFtAih": {
-      "type": "instagram-section-by-turbo",
-      "settings": {
-        "id_section": "",
-        "title": "<p>Síguenos en Instagram</p>",
-        "instagram_title": "@instagram",
-        "instagram_link": "",
-        "title_section_color": "#ff4375",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "newsletter_a9Dn7e": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_RYkfq3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Obtén 10% de descuento en tu primera compra",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_z3yXtL": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Recibe también contenido y promociones exclusivas en tu correo.</p>"
-          }
-        },
-        "email_form_excHHM": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_RYkfq3",
-        "paragraph_z3yXtL",
-        "email_form_excHHM"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "background_section_color": "radial-gradient(rgba(143, 216, 59, 1), rgba(180, 250, 100, 1) 100%)",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "faq_by_turbo_CgUXxw": {
@@ -537,6 +494,52 @@
         "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "instagram_section_by_turbo_nFtAih": {
+      "type": "instagram-section-by-turbo",
+      "settings": {
+        "id_section": "",
+        "title": "<p>Síguenos en Instagram</p>",
+        "instagram_title": "@instagram",
+        "instagram_link": "",
+        "title_section_color": "#ff4375",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_a9Dn7e": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_RYkfq3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Obtén 10% de descuento en tu primera compra",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_z3yXtL": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Recibe también contenido y promociones exclusivas en tu correo.</p>"
+          }
+        },
+        "email_form_excHHM": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_RYkfq3",
+        "paragraph_z3yXtL",
+        "email_form_excHHM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "background_section_color": "radial-gradient(rgba(143, 216, 59, 1), rgba(180, 250, 100, 1) 100%)",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
