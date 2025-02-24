@@ -467,24 +467,7 @@
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
                 %}
-                {% when 'extra_info' %}
-                  <div class="wrapper-extra-info-pdp">
-                    <ul>
-                        {% if block.type == 'extra_info' %}
-                          <li>
-                            {% if block.settings.icon_extra_info != blank %}
-                              {{ block.settings.icon_extra_info | image_url: width: 40, height: 40 | image_tag }}
-                            {% endif %}
-                            <div class="title-extra-info">
-                              {{ block.settings.title_extra_info }}
-                            </div>
-                            <div class="subtitle-extra-info">
-                              {{ block.settings.subtitle_extra_info }}
-                            </div>
-                          </li>
-                        {% endif %}
-                    </ul>
-                  </div>
+
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker',
                   product: product,
@@ -697,6 +680,25 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
+          <div class="wrapper-extra-info-pdp">
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.type == 'extra_info' %}
+                  <li>
+                    {% if block.settings.icon_extra_info != blank %}
+                      {{ block.settings.icon_extra_info | image_url: width: 40, height: 40 | image_tag }}
+                    {% endif %}
+                    <div class="title-extra-info">
+                      {{ block.settings.title_extra_info }}
+                    </div>
+                    <div class="subtitle-extra-info">
+                      {{ block.settings.subtitle_extra_info }}
+                    </div>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
