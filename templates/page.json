@@ -31,6 +31,9 @@
       "block_order": [
         "heading_b7LcVt"
       ],
+      "custom_css": [
+        ".banner__heading {font-size: 72px; color: #fff; line-height: 1;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/IMG.png",
         "image_overlay_opacity": 0,
