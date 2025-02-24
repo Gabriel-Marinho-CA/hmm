@@ -30,15 +30,39 @@
   @media (min-width:767px) {
   .mobile-custom-image-banner {
       display:none !important;
+
     }
+
   }
   @media (max-width:766px) {
   .desktop-custom-image-banner {
       display:none !important;
     }
+    .desktop-custom-image-banner img {
+      width: 100%;
+    height: auto;
+    }
   }
-
 {%- endstyle -%}
+
+<style>
+  .custom-banner-image-turbo {
+    @media (max-width: 766px) {
+      .banner__media {
+        position: initial;
+        background: none;
+      }
+      .mobile-custom-image-banner {
+        height: auto;
+        position: initial;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+</style>
 
 {%- liquid
   assign full_width = '100vw'
@@ -64,7 +88,7 @@
 
 <div
   id="Banner-{{ section.id }}"
-  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="custom-banner-image-turbo banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -100,10 +124,13 @@
           {{
             section.settings.image_mobile
             | image_url: width: 3840
-            | image_tag: width: section.settings.image.width, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+            | image_tag:
+              width: section.settings.image.width,
+              sizes: sizes,
+              widths: widths,
+              fetchpriority: fetch_priority
           }}
         {% endif %}
-
       </div>
     </div>
   {%- elsif section.settings.image_2 == blank -%}
