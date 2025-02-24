@@ -1142,6 +1142,8 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
+    console.log("entrei");
+    
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 
