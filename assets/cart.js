@@ -8,7 +8,7 @@ class CartRemoveButton extends HTMLElement {
       cartItems.updateQuantity(this.dataset.index, 0);
     });
   }
-}
+} 
 
 customElements.define('cart-remove-button', CartRemoveButton);
 
