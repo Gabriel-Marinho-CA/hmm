@@ -156,12 +156,13 @@
         "column_GFaYfG"
       ],
       "settings": {
+        "bg_color_multicolumn": "",
         "title": "",
         "heading_size": "h2",
         "image_width": "half",
         "image_ratio": "adapt",
         "columns_desktop": 4,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
