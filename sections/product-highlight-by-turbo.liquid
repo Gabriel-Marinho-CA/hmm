@@ -12,6 +12,64 @@
   }
 {% endstyle %}
 
+<style>
+    .product-highlight.section-{{ section.id }}-padding {
+      position:relative;
+      z-index:0;
+      background-color:{{ section.settings.bg_color }};
+      &::before {
+          position: absolute;
+          top: 0;
+          left:0;
+          z-index: -1;
+          content:"";
+          width: 100%;
+          height: 100%;
+          background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
+          background-repeat: round;
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        justify-content: space-between;
+      }
+
+      * {
+          line-height: 1;
+          margin:0;
+      }
+
+      strong {
+          color: {{ section.settings.strong_color }};
+      }
+
+      .title-hgl {
+          * {
+
+              font-size: 78px;
+              letter-spacing: 1.5px;
+          }
+          strong {
+              font-weight: 400;
+          }
+      }
+      .subtitle-hgl {
+        font-size: 22px;
+      }
+
+      .buy-btn-hgl {
+        a {
+           font-size: 32px;
+           font-weight: 700;
+           text-decoration: none;
+           border-radius: 32px;
+        }
+      }
+    }
+</style>
+
 <div
   class="product-highlight section-{{ section.id }}-padding"
   {% if section.settings.id_section %}
@@ -220,7 +278,7 @@
   ],
   "presets": [
     {
-        "name":"Product highlight"
+      "name": "Product highlight"
     }
   ]
 }
