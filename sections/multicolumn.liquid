@@ -19,6 +19,10 @@
     }
 {%- endstyle -%}
 
+<style>
+
+</style>
+
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
@@ -359,6 +363,14 @@
         {
           "value": "2",
           "label": "t:sections.multicolumn.settings.columns_mobile.options__2.label"
+        },
+        {
+          "value": "3",
+          "label": "3 colunas"
+        },
+        {
+          "value": "4",
+          "label": "4 colunas"
         }
       ],
       "default": "1",
