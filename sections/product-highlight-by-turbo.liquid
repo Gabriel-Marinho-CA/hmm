@@ -1,0 +1,222 @@
+{% style %}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="product-highlight section-{{ section.id }}-padding"
+  {% if section.settings.id_section %}
+    id="{{ section.settings.id_section |  handleize}}"
+  {% endif %}
+>
+  <div class="pdp_highlight page-width">
+    <div class="icon-top-left">
+      {% if section.settings.icon_top_left != blank %}
+        {{ section.settings.icon_top_left | image_url: width: 60, height: 60 | image_tag }}
+      {% endif %}
+    </div>
+    <div class="wrapper">
+      <div class="left">
+        <div class="title-hgl">
+          {{ section.settings.title }}
+        </div>
+        <div class="subtitle-hgl">
+          {{ section.settings.subtitle }}
+        </div>
+        <div class="buy-btn-hgl">
+          <a
+            href="{{ section.settings.link_btn }}"
+            style="background-color: {{ section.settings.btn_color_bg }}; color: {{ section.settings.btn_color_text }}"
+          >
+            {{ section.settings.btn_text }}
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="bottom-left">
+          {{ section.settings.bottom_left }}
+        </div>
+        <div class="top-left">
+          {{ section.settings.top_left }}
+        </div>
+        <div class="bottom-right">
+          {{ section.settings.bottom_right }}
+        </div>
+        <div class="top-right">
+          {{ section.settings.top_right }}
+        </div>
+        <div class="image">
+          {% if section.settings.icon_top_left_product != blank %}
+            <div class="icon-top-left-pdp">
+              {{ section.settings.icon_top_left_product | image_url: width: 77, height: 77 | image_tag }}
+            </div>
+          {% endif %}
+          {% if section.settings.product_image != blank %}
+            <div class="wrapper-pdp-image">
+              {{ section.settings.product_image | image_url: width: 600, height: 600 | image_tag }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.icon_top_left_product != blank %}
+            <div class="icon-bottom-right-pdp">
+              {{ section.settings.icon_top_left_product | image_url: width: 77, height: 77 | image_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Destaque de produto",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Cores"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Cor background",
+      "default": "#FF4375"
+    },
+    {
+      "type": "color",
+      "id": "strong_color",
+      "label": "Cor destaque",
+      "default": "#B4FA64"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Cor dos textos",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "btn_color_bg",
+      "label": "Cor background botão",
+      "default": "#B4FA64"
+    },
+    {
+      "type": "color",
+      "id": "btn_color_text",
+      "label": "Cor Texto botão",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Textos"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitulo"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "COMPRAR AHORA"
+    },
+    {
+      "type": "url",
+      "id": "link_btn",
+      "label": "Link do botão"
+    },
+    {
+      "type": "text",
+      "id": "bottom_left",
+      "label": "Texto baixo esquerda"
+    },
+    {
+      "type": "text",
+      "id": "top_left",
+      "label": "Texto cima esquerda"
+    },
+    {
+      "type": "text",
+      "id": "bottom_right",
+      "label": "Texto baixo direita"
+    },
+    {
+      "type": "text",
+      "id": "top_right",
+      "label": "Texto cima direita"
+    },
+    {
+      "type": "header",
+      "content": "Imagens"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Imagem background"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_top_left",
+      "label": "Icone cima esquerda"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_top_left_product",
+      "label": "Icone cima esquerda produto"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_bottom_right_product",
+      "label": "Icone baixo direita"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Imagem do produto"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
