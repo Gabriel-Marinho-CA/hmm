@@ -41,9 +41,25 @@
         "extra_info_WVKWJV": {
           "type": "extra_info",
           "settings": {
-            "icon_extra_info": "shopify://shop_images/Layer_1_1f0ef327-dc89-48d1-b513-fab726e0470a.png",
-            "title_extra_info": "<p>Frete Grátis</p>",
-            "subtitle_extra_info": "<p>acima de R$300</p>"
+            "icon_extra_info": "shopify://shop_images/icon-park-outline_bank-card_304a0113-0381-47a1-8ed6-4e953c8bc581.png",
+            "title_extra_info": "<p>Parcele em até</p>",
+            "subtitle_extra_info": "<p>12x sem juros</p>"
+          }
+        },
+        "extra_info_Y4p7pr": {
+          "type": "extra_info",
+          "settings": {
+            "icon_extra_info": "shopify://shop_images/icon-plane_3e6d482b-3b9a-4c15-be20-080a183946f5.png",
+            "title_extra_info": "<p>Entrega para</p>",
+            "subtitle_extra_info": "<p> todo o Brasil</p>"
+          }
+        },
+        "extra_info_EaKcTD": {
+          "type": "extra_info",
+          "settings": {
+            "icon_extra_info": "shopify://shop_images/Icon_fcf0434f-f808-4f7b-8b3c-e9fa3d07847e.png",
+            "title_extra_info": "<p>Garantia de</p>",
+            "subtitle_extra_info": "<p>7 dias</p>"
           }
         }
       },
@@ -52,7 +68,9 @@
         "variant_picker",
         "buy_buttons",
         "extra_info_wnWb7V",
-        "extra_info_WVKWJV"
+        "extra_info_WVKWJV",
+        "extra_info_Y4p7pr",
+        "extra_info_EaKcTD"
       ],
       "settings": {
         "section_id": "produto",
