@@ -66,9 +66,9 @@
             </div>
           {% endif %}
 
-          {% if section.settings.icon_top_left_product != blank %}
+          {% if section.settings.icon_bottom_right_product != blank %}
             <div class="icon-bottom-right-pdp">
-              {{ section.settings.icon_top_left_product | image_url: width: 77, height: 77 | image_tag }}
+              {{ section.settings.icon_bottom_right_product | image_url: width: 120, height: 140 | image_tag }}
             </div>
           {% endif %}
         </div>
