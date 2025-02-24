@@ -90,6 +90,8 @@ if (!customElements.get('product-info')) {
       }
 
       handleSwapProduct(productUrl, updateFullPage) {
+        console.log("oi2");
+        
         return (html) => {
           this.productModal?.remove();
 
@@ -118,6 +120,8 @@ if (!customElements.get('product-info')) {
       }
 
       renderProductInfo({ requestUrl, targetId, callback }) {
+        console.log("oi3");
+        
         this.abortController?.abort();
         this.abortController = new AbortController();
 
@@ -142,11 +146,15 @@ if (!customElements.get('product-info')) {
       }
 
       getSelectedVariant(productInfoNode) {
+        console.log("oi 4");
+        
         const selectedVariant = productInfoNode.querySelector('variant-selects [data-selected-variant]')?.innerHTML;
         return !!selectedVariant ? JSON.parse(selectedVariant) : null;
       }
 
       buildRequestUrlWithParams(url, optionValues, shouldFetchFullPage = false) {
+        console.log("oi5");
+        
         const params = [];
 
         !shouldFetchFullPage && params.push(`section_id=${this.sectionId}`);
@@ -159,6 +167,7 @@ if (!customElements.get('product-info')) {
       }
 
       updateOptionValues(html) {
+        console.log("oi6");
         const variantSelects = html.querySelector('variant-selects');
         if (variantSelects) {
           HTMLUpdateUtility.viewTransition(this.variantSelectors, variantSelects, this.preProcessHtmlCallbacks);
