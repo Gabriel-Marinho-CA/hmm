@@ -175,6 +175,9 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "custom_css": [
+        ".slider-buttons {display: none !important; }"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h2",
