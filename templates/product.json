@@ -113,10 +113,79 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_hcbreb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_JhWaPL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006237.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UqfYMP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006240.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ef9Ctc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006238.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DdEyHH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006239.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_JhWaPL",
+        "column_UqfYMP",
+        "column_ef9Ctc",
+        "column_DdEyHH"
+      ],
+      "settings": {
+        "bg_color_multicolumn": "#b4fa64",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "multicolumn_hcbreb"
   ]
 }
