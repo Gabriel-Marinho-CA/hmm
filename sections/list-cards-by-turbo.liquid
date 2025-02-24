@@ -131,6 +131,23 @@
   </div>
 </div>
 
+<script>
+    new Swiper('.section-{{ section.id }} .swiper', {
+    spaceBetween: 16,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    breakpoints: {
+      767: {
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        centeredSlides: true,
+      },
+      992: {
+        spaceBetween: 40,
+      },
+    },
+  });
+</script>
 {% schema %}
 {
   "name": "Card Image List",
