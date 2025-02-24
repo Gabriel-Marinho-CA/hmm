@@ -5,11 +5,10 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-  .newsletter__wrapper {
     background: {{ section.settings.background_section_color }}
 
   }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -83,8 +82,8 @@
     }
 </style>
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow {% endif %}">
+  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} page-width gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="left-newsletter">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
