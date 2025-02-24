@@ -310,8 +310,12 @@ if (!customElements.get('product-info')) {
         if (modalContent && newModalContent) modalContent.innerHTML = newModalContent.innerHTML;
 
         // update media productMainImage
-        const featuredContent = this.productModal?.querySelector(`.product__modal-opener product__media`);
+        const featuredContent = this.querySelector(`.product__modal-opener product__media`);
+        console.log(featuredContent);
         const newFeaturedContent = html.querySelector(`.product-modal .product-media-modal__content`);
+        console.log("!!!!!!");
+        
+        console.log(newFeaturedContent)
         if (featuredContent && newFeaturedContent) featuredContent.innerHTML = newFeaturedContent.innerHTML;
       }
 
