@@ -23,15 +23,18 @@
 
   .collapsible-content__wrapper {
     position:relative;
-    &::after {
-        content: "";
+    &::before {
         position: absolute;
-        bottom: 0px;
-        background-color: #0B2F6F;
-        height: 40px;
-        width: 100%;
+        top: 0;
+        left:0;
         z-index: -1;
-      }
+        content:"";
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ section.settings.bg_iamge | image_url: width: section.settings.bg_iamge.width , height: section.settings.bg_iamge.height}}");
+        background-repeat: round;
+        opacity: 32%;
+    }
   }
 
   .section-drop-{{ section.id }} {
