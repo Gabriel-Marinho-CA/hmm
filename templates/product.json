@@ -182,6 +182,31 @@
         "padding_bottom": 36
       }
     },
+    "product_highlight_by_turbo_L8CndU": {
+      "type": "product-highlight-by-turbo",
+      "settings": {
+        "bg_color": "#ff4375",
+        "strong_color": "#b4fa64",
+        "text_color": "#ffffff",
+        "btn_color_bg": "#b4fa64",
+        "btn_color_text": "#ff4375",
+        "title": "<h3>Transforma tu belleza con el <strong>poder del rosa</strong></h3>",
+        "subtitle": "<p>Con vitaminas, minerales y mucho colágeno, Rosa Hair nutre desde el interior, además de:</p>",
+        "btn_text": "COMPRAR AHORA",
+        "link_btn": "",
+        "bottom_left": "<p>Aportar firmeza e hidratación a la piel</p>",
+        "top_left": "<p>Reducir la caída del cabello</p>",
+        "bottom_right": "<p>Fortalecer las uñas </p>",
+        "top_right": "<p>Acelerar el crecimiento </p>",
+        "bg_image": "shopify://shop_images/elemento_movimento.png",
+        "icon_top_left": "shopify://shop_images/Group_40082.png",
+        "icon_top_left_product": "shopify://shop_images/Group_40077.png",
+        "icon_bottom_right_product": "shopify://shop_images/Group_40117.png",
+        "product_image": "shopify://shop_images/image_230.png",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_mYqCjJ": {
       "type": "rich-text",
       "blocks": {
@@ -311,7 +336,7 @@
         "background_section_color": "#ff4375",
         "text_color": "#ffffff",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "video_slider_by_turbo_amVFF3": {
@@ -429,31 +454,6 @@
         "padding_bottom": 52
       }
     },
-    "product_highlight_by_turbo_L8CndU": {
-      "type": "product-highlight-by-turbo",
-      "settings": {
-        "bg_color": "#ff4375",
-        "strong_color": "#b4fa64",
-        "text_color": "#ffffff",
-        "btn_color_bg": "#b4fa64",
-        "btn_color_text": "#ff4375",
-        "title": "<h3>Transforma tu belleza con el <strong>poder del rosa</strong></h3>",
-        "subtitle": "<p>Con vitaminas, minerales y mucho colágeno, Rosa Hair nutre desde el interior, además de:</p>",
-        "btn_text": "COMPRAR AHORA",
-        "link_btn": "",
-        "bottom_left": "<p>Aportar firmeza e hidratación a la piel</p>",
-        "top_left": "<p>Reducir la caída del cabello</p>",
-        "bottom_right": "<p>Fortalecer las uñas </p>",
-        "top_right": "<p>Acelerar el crecimiento </p>",
-        "bg_image": "shopify://shop_images/elemento_movimento.png",
-        "icon_top_left": "shopify://shop_images/Group_40082.png",
-        "icon_top_left_product": "shopify://shop_images/Group_40077.png",
-        "icon_bottom_right_product": "shopify://shop_images/Group_40117.png",
-        "product_image": "shopify://shop_images/image_230.png",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "faq_by_turbo_CgUXxw": {
       "type": "faq-by-turbo",
       "blocks": {
@@ -544,14 +544,14 @@
     "main",
     "related-products",
     "multicolumn_hcbreb",
+    "product_highlight_by_turbo_L8CndU",
     "rich_text_mYqCjJ",
     "list_cards_by_turbo_F9WWzy",
     "deals_bar_by_turbo_MYCaPP",
     "video_slider_by_turbo_amVFF3",
     "image_banner_UiMzmk",
+    "faq_by_turbo_CgUXxw",
     "instagram_section_by_turbo_nFtAih",
-    "newsletter_a9Dn7e",
-    "product_highlight_by_turbo_L8CndU",
-    "faq_by_turbo_CgUXxw"
+    "newsletter_a9Dn7e"
   ]
 }
