@@ -70,6 +70,7 @@ if (!customElements.get('product-info')) {
         const shouldSwapProduct = this.dataset.url !== productUrl;
         const shouldFetchFullPage = this.dataset.updateUrl === 'true' && shouldSwapProduct;
 
+        console.log("handleOptionValueChange");
         this.renderProductInfo({
           requestUrl: this.buildRequestUrlWithParams(productUrl, selectedOptionValues, shouldFetchFullPage),
           targetId: target.id,
@@ -162,6 +163,8 @@ if (!customElements.get('product-info')) {
       }
 
       handleUpdateProductInfo(productUrl) {
+        console.log("handleUpdateProductInfo");
+        
         return (html) => {
           const variant = this.getSelectedVariant(html);
 
