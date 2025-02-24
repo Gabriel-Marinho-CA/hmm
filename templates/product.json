@@ -181,11 +181,42 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_mYqCjJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EQh7bc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fuerza, crecimiento y brillo en cada gomitao dia a dia",
+            "heading_size": "h1"
+          }
+        },
+        "text_RrbWWV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Una rutina simple para un cabello más hermoso y saludable todos los días</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EQh7bc",
+        "text_RrbWWV"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "multicolumn_hcbreb"
+    "multicolumn_hcbreb",
+    "rich_text_mYqCjJ"
   ]
 }
