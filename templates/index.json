@@ -177,7 +177,7 @@
       "type": "featured-collection",
       "custom_css": [
         ".slider-buttons {display: none !important;}",
-        "@media (max-width:547px) {.custom-card-item.grid__item {margin-left: 0rem !important; max-width: 86vw !important; }}"
+        "@media (max-width: 547px) {.custom-card-item.grid__item {max-width: 80vw !important; }}"
       ],
       "settings": {
         "title": "",
