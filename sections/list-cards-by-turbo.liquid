@@ -33,12 +33,21 @@
           grid-template-rows: subgrid;
           gap: 0;
           grid-row: 1/3;
+
+          @media (max-width:1000px) {
+            margin-right: 16px;
+            display: flex;
+            flex-direction: column;
+          }
         }
-
-
 
         .image-card {
             position:relative;
+            @media (max-width:1000px) {
+              display: flex;
+              align-items: end;
+              height: fit-content;
+            }
             &::before {
                 content: "";
                 width: 100%;
@@ -48,6 +57,11 @@
                 bottom: -6px;
                 z-index: 0;
                 background: var(--bg-color)
+
+                @media (max-width:1000px) {
+                height: 188px;
+                bottom:0;
+                }
             }
 
             img {
@@ -65,12 +79,20 @@
                 color: #242323;
                 margin: 0;
                 font-weight: 600;
+
+                @media (max-width:1000px) {
+                  font-size:18px;
+                }
             }
             .subtitle-card *{
                 font-size: 18px;
                 color: #242323;
                 line-height: 1.12;
                 margin: 0;
+
+                @media (max-width:1000px) {
+                  font-size:16px;
+                }
             }
         }
     }
