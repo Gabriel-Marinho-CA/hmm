@@ -298,14 +298,13 @@ a.product__text {
 
 .product__title > * {
   margin: 0;
-  font-family: "Lyster";
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 1;
   text-align: start;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #191970;
+  color: #000;
 
   @media (max-width: 750px) {
     font-size: 26px;
@@ -1612,10 +1611,10 @@ a.product__text {
   padding: 2rem;
 
   &.active-variant {
-    border: 2px solid #191970;
+    border: 2px solid #FF4375;
 
     .tag-variant-discount {
-      background: #191970;
+      background: #FF4375;
 
       p {
         color: #fff;
