@@ -41,6 +41,27 @@
     }
   {%- endstyle -%}
 
+  <style>
+    .wrapper-extra-info-pdp {
+      ul {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        li {
+          * {
+            color: #ff4375;
+            font-size: 13px;
+            line-height: 1;
+          }
+          img {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  </style>
+
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
