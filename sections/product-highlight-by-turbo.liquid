@@ -45,10 +45,18 @@
       strong {
           color: {{ section.settings.strong_color }};
       }
+      .hgl-text {
+        color: {{ section.settings.strong_color }};
+        font-size:24px;
+        font-weight:600;
+        border: 2px solid {{ section.settings.strong_color }};
+        padding: 1rem;
+        border-radius:24px;
+        text-align:center;
+      }
 
       .title-hgl {
           * {
-
               font-size: 78px;
               letter-spacing: 1.5px;
           }
@@ -111,16 +119,16 @@
         </div>
       </div>
       <div class="right">
-        <div class="bottom-left">
+        <div class="bottom-left hgl-text">
           {{ section.settings.bottom_left }}
         </div>
-        <div class="top-left">
+        <div class="top-left hgl-text">
           {{ section.settings.top_left }}
         </div>
-        <div class="bottom-right">
+        <div class="bottom-right hgl-text">
           {{ section.settings.bottom_right }}
         </div>
-        <div class="top-right">
+        <div class="top-right hgl-text">
           {{ section.settings.top_right }}
         </div>
         <div class="image">
