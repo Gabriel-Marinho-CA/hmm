@@ -1142,9 +1142,12 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
-    console.log("kolleeee")
     if (!this.currentVariant) return;
+    console.log("kollee 1")
+
     if (!this.currentVariant.featured_media) return;
+
+    console.log("kollee 2")
 
     const mediaGalleries = document.querySelectorAll(
       `[id^="MediaGallery-${this.dataset.section}"]`
