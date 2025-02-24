@@ -1610,6 +1610,10 @@ a.product__text {
   border-radius: 8px 0 8px 8px;
   padding: 2rem;
 
+  input {
+    accent-color: #FF4375;
+  }
+
   &.active-variant {
     border: 2px solid #FF4375;
 
