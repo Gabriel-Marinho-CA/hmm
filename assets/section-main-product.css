@@ -1841,9 +1841,8 @@ a.product__text {
 }
 
 .product-form__submit {
-  font-family: "Quicksand";
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 20px;
   height: 64px;
   display: flex;
@@ -1852,9 +1851,8 @@ a.product__text {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #191970;
-  background: #fdcb25;
-  box-shadow: 2px 4px 0px 0px #000000;
+  color: #fff;
+  background: #FF4375;
   transition: all 0.5s ease;
   border-radius: 300px;
 
@@ -1862,11 +1860,6 @@ a.product__text {
   &::after {
     box-shadow: none !important;
     border: none !important;
-  }
-
-  &:hover {
-    background-color: #eaaf00;
-    box-shadow: 2px 4px 0px 0px #0b2f6f;
   }
 }
 
