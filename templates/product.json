@@ -37,13 +37,22 @@
             "title_extra_info": "<p>Frete Grátis</p>",
             "subtitle_extra_info": "<p>acima de R$300</p>"
           }
+        },
+        "extra_info_WVKWJV": {
+          "type": "extra_info",
+          "settings": {
+            "icon_extra_info": "shopify://shop_images/Layer_1_1f0ef327-dc89-48d1-b513-fab726e0470a.png",
+            "title_extra_info": "<p>Frete Grátis</p>",
+            "subtitle_extra_info": "<p>acima de R$300</p>"
+          }
         }
       },
       "block_order": [
         "title",
         "variant_picker",
         "buy_buttons",
-        "extra_info_wnWb7V"
+        "extra_info_wnWb7V",
+        "extra_info_WVKWJV"
       ],
       "settings": {
         "section_id": "produto",

@@ -470,7 +470,6 @@
                 {% when 'extra_info' %}
                   <div class="wrapper-extra-info-pdp">
                     <ul>
-                      {% for block in section.blocks %}
                         {% if block.type == 'extra_info' %}
                           <li>
                             {% if block.settings.icon_extra_info != blank %}
@@ -484,7 +483,6 @@
                             </div>
                           </li>
                         {% endif %}
-                      {% endfor %}
                     </ul>
                   </div>
               {%- when 'variant_picker' -%}
