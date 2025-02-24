@@ -55,8 +55,6 @@
         position:relative;
     }
     .hgl-text {
-        font-size: 22px;
-        font-weight: 600;
         padding: 1rem;
         border-radius: 24px;
         text-align: center;
@@ -68,8 +66,13 @@
         justify-content: center;
         align-items: center;
         border: 2px solid {{ section.settings.strong_color }};
-        color: {{ section.settings.strong_color }};
 
+
+        * {
+            color: {{ section.settings.strong_color }};
+            font-size: 22px;
+            font-weight: 600;
+        }
       &.bottom-left {
         max-width: 265px;
         bottom: 15%;
