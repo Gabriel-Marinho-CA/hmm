@@ -1,5 +1,4 @@
 if (!customElements.get('product-info')) {
-  console.log("dkaspokdpasd");
   
   customElements.define(
     'product-info',
@@ -63,6 +62,8 @@ if (!customElements.get('product-info')) {
       }
 
       handleOptionValueChange({ data: { event, target, selectedOptionValues } }) {
+        console.log("oi");
+        
         if (!this.contains(event.target)) return;
 
         this.resetProductFormState();
@@ -429,6 +430,4 @@ if (!customElements.get('product-info')) {
       }
     }
   );
-} else {
-  console.log("CARAA");
-}
+} 
