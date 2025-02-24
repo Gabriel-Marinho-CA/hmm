@@ -313,6 +313,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video_slider_by_turbo_amVFF3": {
+      "type": "video-slider-by-turbo",
+      "blocks": {
+        "testimonial_CyPKLm": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_xYPDJe": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_JVEVFw": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        },
+        "testimonial_d6Uffj": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/12e41375e5ec44c58b04bf32ea85b649.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_CyPKLm",
+        "testimonial_xYPDJe",
+        "testimonial_JVEVFw",
+        "testimonial_d6Uffj"
+      ],
+      "custom_css": [],
+      "settings": {
+        "id_section": "",
+        "color_scheme": "scheme-507647c6-1b84-49a0-8942-c8e49e155acc",
+        "title": "Tu ritual de belleza con un toque dulce",
+        "title_color": "#FFF",
+        "bg_image": "shopify://shop_images/Group_1000006247.png",
+        "background_section_color": "radial-gradient(rgba(255, 100, 25, 1), rgba(255, 100, 25, 1) 100%)",
+        "seal_1": "shopify://shop_images/Group_40075.png",
+        "seal_2": "shopify://shop_images/Group_40085.png",
+        "btn_text": "COMPRAR",
+        "btn_link": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -321,6 +374,7 @@
     "multicolumn_hcbreb",
     "rich_text_mYqCjJ",
     "list_cards_by_turbo_F9WWzy",
-    "deals_bar_by_turbo_MYCaPP"
+    "deals_bar_by_turbo_MYCaPP",
+    "video_slider_by_turbo_amVFF3"
   ]
 }
