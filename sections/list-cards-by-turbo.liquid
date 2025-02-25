@@ -40,8 +40,6 @@
 
           @media (max-width:1000px) {
             margin-right: 16px;
-            display: flex;
-            flex-direction: column;
             width:71vw;
           }
         }
@@ -183,18 +181,18 @@
     });
   } else {
     new Swiper('.section-{{ section.id }}-padding .swiper', {
-      spaceBetween: 5,
+      spaceBetween: 10,
       slidesPerView: 'auto',
       centeredSlides: false,
       breakpoints: {
         767: {
           slidesPerView: 'auto',
-          spaceBetween: 5,
+          spaceBetween: 10,
           centeredSlides: true,
         },
         992: {
           slidesPerView: 'auto',
-          spaceBetween: 5,
+          spaceBetween: 10,
         },
       },
     });
