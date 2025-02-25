@@ -47,64 +47,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "ofertas_info_by_turbo_xYNRhj": {
-      "type": "ofertas-info-by-turbo",
-      "blocks": {
-        "deal_NnVLYK": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Layer_1.png",
-            "title": "<p><strong>Frete Grátis</strong></p>",
-            "subtitle": "<p>acima de R$300</p>"
-          }
-        },
-        "deal_7jJwkq": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/icon-park-outline_bank-card.png",
-            "title": "<p>Parcele em até</p>",
-            "subtitle": "<p><strong>3x sem juros</strong></p>"
-          }
-        },
-        "deal_GMX9UU": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Icon.png",
-            "title": "<p><strong>Garantia</strong></p>",
-            "subtitle": "<p>de 7 dias</p>"
-          }
-        },
-        "deal_Y76J3M": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Frame.png",
-            "title": "<p>Pagamento</p>",
-            "subtitle": "<p><strong>100% Seguro</strong></p>"
-          }
-        },
-        "deal_WjecRh": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/icon-plane.png",
-            "title": "<p>Entrega para</p>",
-            "subtitle": "<p><strong>todo o Brasil</strong></p>"
-          }
-        }
-      },
-      "block_order": [
-        "deal_NnVLYK",
-        "deal_7jJwkq",
-        "deal_GMX9UU",
-        "deal_Y76J3M",
-        "deal_WjecRh"
-      ],
-      "settings": {
-        "deal_bar_active": true,
-        "deal_bar_active_mobile": true,
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
     "multicolumn_Wm9TCi": {
       "type": "multicolumn",
       "blocks": {
@@ -411,6 +353,64 @@
         "padding_bottom": 36
       }
     },
+    "ofertas_info_by_turbo_xYNRhj": {
+      "type": "ofertas-info-by-turbo",
+      "blocks": {
+        "deal_NnVLYK": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1.png",
+            "title": "<p><strong>Frete Grátis</strong></p>",
+            "subtitle": "<p>acima de R$300</p>"
+          }
+        },
+        "deal_7jJwkq": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/icon-park-outline_bank-card.png",
+            "title": "<p>Parcele em até</p>",
+            "subtitle": "<p><strong>3x sem juros</strong></p>"
+          }
+        },
+        "deal_GMX9UU": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Icon.png",
+            "title": "<p><strong>Garantia</strong></p>",
+            "subtitle": "<p>de 7 dias</p>"
+          }
+        },
+        "deal_Y76J3M": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Frame.png",
+            "title": "<p>Pagamento</p>",
+            "subtitle": "<p><strong>100% Seguro</strong></p>"
+          }
+        },
+        "deal_WjecRh": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/icon-plane.png",
+            "title": "<p>Entrega para</p>",
+            "subtitle": "<p><strong>todo o Brasil</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "deal_NnVLYK",
+        "deal_7jJwkq",
+        "deal_GMX9UU",
+        "deal_Y76J3M",
+        "deal_WjecRh"
+      ],
+      "settings": {
+        "deal_bar_active": true,
+        "deal_bar_active_mobile": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
     "newsletter_hGf8qR": {
       "type": "newsletter",
       "blocks": {
@@ -448,7 +448,6 @@
   },
   "order": [
     "main_banner_by_turbo_4HTpEC",
-    "ofertas_info_by_turbo_xYNRhj",
     "multicolumn_Wm9TCi",
     "featured_collection",
     "image_banner_Gk8aLd",
@@ -457,6 +456,7 @@
     "deals_bar_by_turbo_PhqXmB",
     "video_slider_by_turbo_Cg3Trf",
     "instagram_section_by_turbo_bMbwTz",
+    "ofertas_info_by_turbo_xYNRhj",
     "newsletter_hGf8qR"
   ]
 }
