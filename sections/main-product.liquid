@@ -75,6 +75,26 @@
         }
       }
     }
+    .float-buy-btn {
+      display: none;
+      width: 100%;
+      position: fixed;
+      bottom:0;
+      padding:1rem;
+      
+
+      &.active {
+      display: block;
+    }
+      .total_price-button,
+      .installments {
+        display:none;
+      }
+
+      .product-form__submit  {
+        border-radius:8px;
+      }
+    }
   </style>
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -811,6 +831,26 @@
   </div>
 </product-info>
 
+<script>
+  document.addEventListener("DOMContentLoaded",function() {
+    const float_buy_btn = document.querySelector(".float-buy-btn");
+
+    const targetElement = document.querySelector(".product__info-container .product-form__submit");
+    
+    if (!targetElement) return;
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            float_buy_btn.classList.add("active"); // Se visível, true; se não, false
+          },
+      { threshold: 1 } // Define quanto da div precisa estar visível (50% aqui)
+    );
+
+    observer.observe(targetElement);
+
+    return () => observer.disconnect();
+  })
+</script>
 {% schema %}
 {
   "name": "t:sections.main-product.name",
