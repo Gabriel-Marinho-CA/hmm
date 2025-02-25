@@ -19,130 +19,168 @@
 {% endif %}
 
 <style>
-  .timer-cupom{
-    .announcement-bar-text{
+  .timer-cupom {
+    .announcement-bar-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0.8rem 0;
+
+      @media (max-width: 380px) {
+        flex-direction: column-reverse;
+      }
+
+      p {
+        color: #000;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+
+        span {
+          color: #000;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          @media (max-width: 380px) {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 380px) {
+          font-size: 1rem;
+        }
+      }
+
+      .timers {
         display: flex;
         align-items: center;
         justify-content: center;
+        align-content: center;
         gap: 1rem;
-        margin: 0.8rem 0;
 
-        @media (max-width:380px) {
-          flex-direction: column-reverse;
-        }
+        .hrs {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          background: #fff;
+          width: 4.2rem;
+          height: 4.2rem;
+          border-radius: 0.4rem;
+          padding: 0.8rem;
+          @media (max-width: 380px) {
+            width: 3rem;
+            height: 3rem;
+          }
 
-        p{
-            color: #000;            
+          p {
+            color: #000;
             font-size: 1.6rem;
             font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            font-weight: 600;
+            line-height: 80%; /* 1.28rem */
             margin: 0;
-
-            span{
-                color: #000;                
-                font-size: 1.6rem;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                text-transform: uppercase;
+            @media (max-width: 380px) {
+              font-size: 1rem;
             }
+          }
+
+          span {
+            color: #000;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 80%; /* 1.28rem */
+            @media (max-width: 380px) {
+              font-size: 1rem;
+            }
+          }
         }
+        .min {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          background: #fff;
+          width: 4.2rem;
+          height: 4.2rem;
+          border-radius: 0.4rem;
+          padding: 0.8rem;
 
-        .timers{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
-            gap: 1rem;
+          @media (max-width: 380px) {
+            width: 3rem;
+            height: 3rem;
+          }
 
-            .hrs{           
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                background: #fff;
-                width: 4.2rem;
-                height: 4.2rem;
-                border-radius: 0.4rem;
-                padding: .8rem;
-
-                p{
-                    color: #000;                    
-                    font-size: 1.6rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 80%; /* 1.28rem */         
-                    margin: 0;
-                }
-
-                span{
-                    color: #000;                    
-                    font-size: 1.5rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 80%; /* 1.28rem */
-                }
+          p {
+            color: #000;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 80%; /* 1.28rem */
+            margin: 0;
+            @media (max-width: 380px) {
+              font-size: 1rem;
             }
-            .min{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                background: #fff;
-                width: 4.2rem;
-                height: 4.2rem;
-                border-radius: 0.4rem;
-                padding: .8rem;
+          }
 
-                p{
-                    color: #000;                    
-                    font-size: 1.6rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 80%; /* 1.28rem */         
-                    margin: 0;
-                }
-
-                span{
-                    color: #000;                    
-                    font-size: 1.5rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 80%; /* 1.28rem */
-                }
+          span {
+            color: #000;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 80%; /* 1.28rem */
+            @media (max-width: 380px) {
+              font-size: 1rem;
             }
-            .segs{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                background: #fff;
-                width: 4.2rem;
-                height: 4.2rem;
-                border-radius: 0.4rem;
-                padding: .8rem;
-
-                p{
-                    color: #000;                    
-                    font-size: 1.6rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 80%; /* 1.28rem */         
-                    margin: 0;
-                }
-
-                span{
-                    color: #000;                    
-                    font-size: 1.5rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 80%; /* 1.28rem */
-                }
-            }
+          }
         }
+        .segs {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          background: #fff;
+          width: 4.2rem;
+          height: 4.2rem;
+          border-radius: 0.4rem;
+          padding: 0.8rem;
+          @media (max-width: 380px) {
+            width: 3rem;
+            height: 3rem;
+          }
+
+          p {
+            color: #000;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 80%; /* 1.28rem */
+            margin: 0;
+            @media (max-width: 380px) {
+              font-size: 1rem;
+            }
+          }
+
+          span {
+            color: #000;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 80%; /* 1.28rem */
+            @media (max-width: 380px) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
     }
-}
+  }
 </style>
 
 <div
@@ -289,81 +327,85 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% else %}
+    {% else %}
       <div class="timer-cupom">
-            <div class="announcement-bar-text">
-                <p>CUPOM: <span id="discount-code">{{ settings.discount_code }}</span></p>
-                <div class="timers">
-                    <div class="hrs">
-                        <p id="hours">{{ settings.timer_hours }}</p><span>hrs</span>
-                    </div>
-                    <img src="{{ 'dots-duplas.png' | asset_url }}" alt="">
-                    <div class="min">
-                        <p id="minutes">{{ settings.timer_minutes }}</p><span>min</span>
-                    </div>
-                    <img src="{{ 'dots-duplas.png' | asset_url }}" alt="">
-                    <div class="segs">
-                        <p id="seconds">{{ settings.timer_seconds }}</p><span>seg</span>
-                    </div>
-                </div>
+        <div class="announcement-bar-text">
+          <p>
+            CUPOM: <span id="discount-code">{{ settings.discount_code }}</span>
+          </p>
+          <div class="timers">
+            <div class="hrs">
+              <p id="hours">{{ settings.timer_hours }}</p>
+              <span>hrs</span>
             </div>
+            <img src="{{ 'dots-duplas.png' | asset_url }}" alt="">
+            <div class="min">
+              <p id="minutes">{{ settings.timer_minutes }}</p>
+              <span>min</span>
+            </div>
+            <img src="{{ 'dots-duplas.png' | asset_url }}" alt="">
+            <div class="segs">
+              <p id="seconds">{{ settings.timer_seconds }}</p>
+              <span>seg</span>
+            </div>
+          </div>
         </div>
-  
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                let hoursElement = document.getElementById("hours");
-                let minutesElement = document.getElementById("minutes");
-                let secondsElement = document.getElementById("seconds");
-  
-                if (!hoursElement || !minutesElement || !secondsElement) {
-                    console.error("Elementos do cronômetro não encontrados no DOM.");
-                    return;
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          let hoursElement = document.getElementById('hours');
+          let minutesElement = document.getElementById('minutes');
+          let secondsElement = document.getElementById('seconds');
+
+          if (!hoursElement || !minutesElement || !secondsElement) {
+            console.error('Elementos do cronômetro não encontrados no DOM.');
+            return;
+          }
+
+          let savedTime = localStorage.getItem('countdownTime');
+          let hours, minutes, seconds;
+
+          if (savedTime) {
+            [hours, minutes, seconds] = savedTime.split(':').map(Number);
+          } else {
+            hours = parseInt(hoursElement.textContent) || 0;
+            minutes = parseInt(minutesElement.textContent) || 0;
+            seconds = parseInt(secondsElement.textContent) || 0;
+          }
+
+          function updateTimer() {
+            if (hours === 0 && minutes === 0 && seconds === 0) {
+              clearInterval(countdownInterval);
+              localStorage.removeItem('countdownTime');
+              return;
+            }
+
+            if (seconds === 0) {
+              if (minutes === 0) {
+                if (hours > 0) {
+                  hours--;
+                  minutes = 59;
+                  seconds = 59;
                 }
-  
-                let savedTime = localStorage.getItem("countdownTime");
-                let hours, minutes, seconds;
-  
-                if (savedTime) {
-                    [hours, minutes, seconds] = savedTime.split(":").map(Number);
-                } else {
-                    hours = parseInt(hoursElement.textContent) || 0;
-                    minutes = parseInt(minutesElement.textContent) || 0;
-                    seconds = parseInt(secondsElement.textContent) || 0;
-                }
-  
-                function updateTimer() {
-                    if (hours === 0 && minutes === 0 && seconds === 0) {
-                        clearInterval(countdownInterval);
-                        localStorage.removeItem("countdownTime");
-                        return;
-                    }
-  
-                    if (seconds === 0) {
-                        if (minutes === 0) {
-                            if (hours > 0) {
-                                hours--;
-                                minutes = 59;
-                                seconds = 59;
-                            }
-                        } else {
-                            minutes--;
-                            seconds = 59;
-                        }
-                    } else {
-                        seconds--;
-                    }
-  
-                    hoursElement.textContent = String(hours).padStart(2, '0');
-                    minutesElement.textContent = String(minutes).padStart(2, '0');
-                    secondsElement.textContent = String(seconds).padStart(2, '0');
-  
-                    localStorage.setItem("countdownTime", `${hours}:${minutes}:${seconds}`);
-                }
-  
-                const countdownInterval = setInterval(updateTimer, 1000);
-            });
-        </script>
-        
+              } else {
+                minutes--;
+                seconds = 59;
+              }
+            } else {
+              seconds--;
+            }
+
+            hoursElement.textContent = String(hours).padStart(2, '0');
+            minutesElement.textContent = String(minutes).padStart(2, '0');
+            secondsElement.textContent = String(seconds).padStart(2, '0');
+
+            localStorage.setItem('countdownTime', `${hours}:${minutes}:${seconds}`);
+          }
+
+          const countdownInterval = setInterval(updateTimer, 1000);
+        });
+      </script>
     {% endif %}
   </div>
 </div>
