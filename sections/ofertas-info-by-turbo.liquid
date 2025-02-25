@@ -23,7 +23,7 @@
         display: block !important;
       }
     }
-    @media (min-width: 799px) {
+    @media (max-width: 799px) {
       &.mobile {
         display: block !important;
       }
@@ -76,7 +76,7 @@
 </style>
 
 <div
-  class="deals-bar deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile == true %}mobile{% endif %}"
+  class="deals-bar deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}"
   {% if section.settings.deal_bar_active %}
     data-sticky="true"
   {% endif %}
