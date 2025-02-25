@@ -187,7 +187,7 @@
     "custom_liquid_thJE9m": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>.rich-text.content-container::before {\ncontent: \"\";\n  position: absolute;\n  z-index: 1;\n  width: 120px;\n  height: 142px;\n  background-image: url(//rosa-latina-dev.myshopify.com/cdn/shop/files/Group_40075.png?crop=center&height=192&v=1740265203&width=152);\n  background-size: contain;\n  background-repeat: no-repeat;\n  top: -59px;\n  right: 20%;\n  transform: rotate(37deg);\n}</style>",
+        "custom_liquid": "<style>@media (min-width:1000px) {.rich-text.content-container::before {\ncontent: \"\";\n  position: absolute;\n  z-index: 1;\n  width: 120px;\n  height: 142px;\n  background-image: url(//rosa-latina-dev.myshopify.com/cdn/shop/files/Group_40075.png?crop=center&height=192&v=1740265203&width=152);\n  background-size: contain;\n  background-repeat: no-repeat;\n  top: -59px;\n  right: 20%;\n  transform: rotate(37deg);\n}}</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
