@@ -91,8 +91,8 @@
         "installment_icon": "shopify://shop_images/Layer_1_1.png",
         "safe_text": "Pago 100% seguro",
         "safe_icon": "shopify://shop_images/Frame_be631dea-01ef-412e-a081-894de7ebeb1b.png",
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "related-products": {
@@ -483,7 +483,7 @@
         "heading": "<p>Preguntas Frecuentes</p>",
         "bg_iamge": "shopify://shop_images/rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_rosa_latina_ros.png",
         "background_section_color": "#A65AE6",
-        "title_section_color": "#fff",
+        "title_section_color": "#ffffff",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
