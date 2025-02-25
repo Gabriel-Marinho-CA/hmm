@@ -97,6 +97,9 @@
         "column_r8XCgP",
         "column_GFaYfG"
       ],
+      "custom_css": [
+        ".multicolumn-card {max-width:168px ;}"
+      ],
       "settings": {
         "bg_color_multicolumn": "",
         "title": "",
