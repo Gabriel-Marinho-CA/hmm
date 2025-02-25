@@ -25,6 +25,14 @@
         align-items: center;
         justify-content: space-between;
         gap:1.25rem;
+        @media (max-width:768px) {
+          flex-direction: column;
+
+
+          * {
+            text-align: center !important;
+          }
+        }
         .left-newsletter {
           display:flex;
           flex-direction: column;
