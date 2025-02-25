@@ -845,12 +845,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(
         ([entry]) => {
             if (entry.isIntersecting) {
-                float_buy_btn.classList.remove("active"); // Remove a classe se o botão estiver visível
+                float_buy_btn.classList.remove("active");
             } else {
-                float_buy_btn.classList.add("active"); // Adiciona a classe se o botão NÃO estiver visível
+                float_buy_btn.classList.add("active"); 
             }
         },
-        { threshold: 0.1 } // Ajustei para 10% de visibilidade para maior precisão
+        { threshold: 0.1 }
     );
 
     observer.observe(targetElement);
