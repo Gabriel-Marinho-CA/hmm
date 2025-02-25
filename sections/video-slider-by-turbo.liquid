@@ -60,8 +60,13 @@
   .video-slider-list {
     position: static;
     display: flex;
-    justify-content:center;
+
   }
+  @media (min-width:769px) {
+    .video-slider-list {
+      justify-content:center;
+    }
+    }
   @media only screen and (max-width: 800px) {
     .video-slider .testimonial__image {
       margin-left: 0;
@@ -145,7 +150,10 @@
 >
   <div class="testimonials page-width">
     {%- if section.settings.title != blank -%}
-      <h2 style="color:{{ section.settings.title_color }}" class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.heading_alignment }}">
+      <h2
+        style="color:{{ section.settings.title_color }}"
+        class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.heading_alignment }}"
+      >
         {{ section.settings.title }}
       </h2>
     {%- endif -%}
