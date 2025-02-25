@@ -62,9 +62,13 @@
                 height: 74%;
                 position: absolute;
                 border-radius: 48px 48px 0 0;
-                bottom: -6px;
+                bottom: 0;
                 z-index: 0;
                 background: var(--bg-color);
+
+                @-moz-document url-prefix() {
+                  bottom: -6px;
+                }
 
                 @media (max-width:1000px) {
                 bottom:0;
@@ -85,6 +89,11 @@
             box-shadow: 0px 4px 24px 0px #00000014;
             border-radius: 0 0 48px 48px;
             padding: 3rem 2rem 4rem 3rem;
+            margin-top: -11px;
+
+            @-moz-document url-prefix() {
+              margin-top:0;
+            }
             .title-card *{
               font-family: "defante";
                 font-size: 24px;
