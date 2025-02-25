@@ -102,6 +102,42 @@
     ]
   },
   {
+    "name": "Cupom de desconto",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Configurações do cupom de desconto"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_discount_enabled",
+        "default": true,
+        "label": "Ativar cupom de desconto?"
+      },
+      {
+        "type": "text",
+        "id": "discount_code",
+        "label": "Código do cupom",
+        "placeholder": "Digite o código do cupom"
+      },
+      {
+        "type": "number",
+        "id": "timer_hours",
+        "label": "Horas"
+      },
+      {
+        "type": "number",
+        "id": "timer_minutes",
+        "label": "Minutos"
+      },
+      {
+        "type": "number",
+        "id": "timer_seconds",
+        "label": "Segundos"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.typography.name",
     "settings": [
       {
