@@ -164,6 +164,9 @@
         "column_ef9Ctc",
         "column_DdEyHH"
       ],
+      "custom_css": [
+        ".multicolumn-card {max-width:170px;}"
+      ],
       "settings": {
         "bg_color_multicolumn": "#b4fa64",
         "title": "",
