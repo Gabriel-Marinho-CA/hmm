@@ -34,7 +34,7 @@
       "custom_css": [
         ".banner__heading {max-width: 552px; font-size: 72px; color: #fff; line-height: 1;}",
         ".desktop-custom-image-banner {height: 100% !important;}",
-        "@media (max-width: 1000px) {.mobile-custom-image-banner img {min-height: 160px; } .banner__content {position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); display: block !important; } .banner__heading {font-size: 32px; max-width: 272px; margin-inline: auto; }}"
+        "@media (max-width: 1000px) {.mobile-custom-image-banner img {min-height: 160px; } .banner__content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block !important; } .banner__heading {font-size: 32px; max-width: 272px; margin-inline: auto; }}"
       ],
       "settings": {
         "image": "shopify://shop_images/IMG.png",
@@ -120,7 +120,8 @@
         "collapsible_row_MGqkhU"
       ],
       "custom_css": [
-        ".collapsible-content-wrapper-narrow {max-width: 780px; padding-inline: 0;}",
+        "@media (min-width: 1000px) {.collapsible-content-wrapper-narrow {max-width: 780px; padding-inline: 0; }}",
+        ".collapsible-content-wrapper-narrow {padding-inline: 3.5rem;}",
         ".accordion__title {font-size: 26px; font-weight: 700;}",
         ".accordion__content * {color: #4d4d4d; font-size: 20px; line-height: 1.4;}",
         ".grid__item .accordion:nth-child(1) {border-top: none;}"
