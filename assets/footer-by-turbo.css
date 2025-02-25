@@ -240,10 +240,11 @@
     color: #000;
 
     @media (max-width:547px) {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       width: 100%;
-      white-space: pre;
     }
   }
 }
