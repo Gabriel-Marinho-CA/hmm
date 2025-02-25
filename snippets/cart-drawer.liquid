@@ -494,8 +494,8 @@
           </div>
 
           <div class="totals" role="status">
-            <h2 class="totals__total">Total:</h2>
-            <p class="totals__total-value">{{ cart.total_price | money }}</p>
+            <h2 class="totals__total totals_cart_drawer">Total:</h2>
+            <p class="totals__total-value totals_value_drawer">{{ cart.total_price | money }}</p>
           </div>
 
           {% comment %} <small class="tax-note caption-large rte">
@@ -554,7 +554,7 @@
           >
             Finalizar compra
           </button>
-          <button onclick="this.closest('cart-drawer').close()">Continuar comprando</button>
+          <button class="keep-buying" onclick="this.closest('cart-drawer').close()">Continuar comprando</button>
         </div>
       </div>
     </div>

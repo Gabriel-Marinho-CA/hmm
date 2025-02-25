@@ -231,6 +231,10 @@ cart-items {
     font-weight: 500;
     border-radius: 32px;
     font-size: 14px;
+    &::before,&::after {
+      box-shadow: none !important;
+      border: none !important;
+    }
   }
   .keep-buying {
     background: none;
@@ -240,4 +244,13 @@ cart-items {
     font-size: 12px;
     font-weight: 500;
   }
+}
+
+.totals_cart_drawer {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.totals_value_drawer {
+  margin-bottom: 1rem;
 }
