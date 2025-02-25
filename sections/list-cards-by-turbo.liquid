@@ -37,7 +37,11 @@
           grid-template-rows: subgrid;
           gap: 0;
           grid-row: 1/3;
-          margin-right:0 !important;
+
+      
+          @media (min-width:1001px) {
+            margin-right:0 !important;
+          }
 
           @media (max-width:1000px) {
             margin-right: 16px;
