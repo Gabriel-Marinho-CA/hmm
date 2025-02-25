@@ -52,14 +52,21 @@
       .banner__media {
         position: initial;
         background: none;
-      }
-      .mobile-custom-image-banner {
-        height: auto;
-        position: initial;
-        img {
-          width: 100%;
-          height: auto;
+
+        &::before {
+          display:none !important;
         }
+      }
+      
+    }
+  }
+  @media (max-width: 766px) {
+    .mobile-custom-image-banner {
+      height: auto !important;
+      position: initial !important;
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
