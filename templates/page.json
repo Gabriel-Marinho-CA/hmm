@@ -122,7 +122,7 @@
       ],
       "custom_css": [
         "@media (min-width: 1000px) {.collapsible-content-wrapper-narrow {max-width: 780px; padding-inline: 0; }}",
-        "@media (max-width: 999px) {.accordion__title {font-size: 18px !important; } .accordion__content * {font-size: 16px !important; } .collapsible-content-wrapper-narrow {padding-inline: 3.5rem;}}",
+        "@media (max-width: 999px) {.accordion__title {font-size: 18px !important; } .accordion__content * {font-size: 16px !important; } .collapsible-content-wrapper-narrow {padding-inline: 3.5rem; }}",
         ".accordion__title {font-size: 26px; font-weight: 700;}",
         ".accordion__content * {color: #4d4d4d; font-size: 20px; line-height: 1.4;}",
         ".grid__item .accordion:nth-child(1) {border-top: none;}"
@@ -160,14 +160,14 @@
         "heading_ne3cXH": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "Obtén 10% de descuento en tu primera compra",
             "heading_size": "h1"
           }
         },
         "paragraph_JCxVE4": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Recibe también contenido y promociones exclusivas en tu correo.</p>"
           }
         },
         "email_form_m8AY9i": {
