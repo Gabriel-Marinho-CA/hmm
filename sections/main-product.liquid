@@ -836,24 +836,25 @@
 </product-info>
 
 <script>
-  document.addEventListener("DOMContentLoaded",function() {
+document.addEventListener("DOMContentLoaded", function () {
     const float_buy_btn = document.querySelector(".float-buy-btn");
-
     const targetElement = document.querySelector(".product__info-container .product-form__submit");
-    
+
     if (!targetElement) return;
 
     const observer = new IntersectionObserver(
         ([entry]) => {
-            float_buy_btn.classList.add("active"); // Se visível, true; se não, false
-          },
-      { threshold: 1 } // Define quanto da div precisa estar visível (50% aqui)
+            if (entry.isIntersecting) {
+                float_buy_btn.classList.remove("active"); // Remove a classe se o botão estiver visível
+            } else {
+                float_buy_btn.classList.add("active"); // Adiciona a classe se o botão NÃO estiver visível
+            }
+        },
+        { threshold: 0.1 } // Ajustei para 10% de visibilidade para maior precisão
     );
 
     observer.observe(targetElement);
-
-    return () => observer.disconnect();
-  })
+});
 </script>
 {% schema %}
 {
