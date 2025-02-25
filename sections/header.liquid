@@ -75,7 +75,9 @@
 {%- style -%}
   .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    box-shadow: 0px 4px 8px 0px #43434A14;
   }
+
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
