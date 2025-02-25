@@ -91,6 +91,9 @@
 
     @media (max-width:768px) {
       font-size: 32px;
+      margin-top: 0;
+      max-width: 349px;
+      margin-inline: auto;
     }
   }
 
@@ -133,11 +136,31 @@
       position: absolute;
       bottom: 2%;
       left: -1%;
+
+      @media (max-width:768px) {
+        bottom: 9%;
+        left: 0;
+
+        img {
+          max-width: 78px;
+          height: auto;
+        }
+      }
     }
     .seal-2 {
       position: absolute;
       top: 0;
       right: 0;
+
+      @media (max-width:768px) {
+        right: -8%;
+        top: 3%;
+
+        img {
+          max-width: 90px;
+          height: auto;
+        }
+      }
     }
   }
 </style>
