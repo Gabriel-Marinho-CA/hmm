@@ -86,6 +86,10 @@
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
 }
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+}
 
 header.header {
   @media (min-width: 997px) {
