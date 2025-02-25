@@ -31,6 +31,8 @@
         inset: 0;
         height: 100%;
         background-color: #FF4375;
+        max-width:100%;
+        display: block;
       }
     }
     .shipping-text {
@@ -118,7 +120,12 @@
             style="width:{{ calc_shipping_bar }}%"
           ></div>
         </div>
-        <p class="shipping-text">Faltam <strong>{{ remainingAmountFormatted }}</strong> para o frete grátis</p>
+        {% if remainingAmountFormatted > 1 %}
+          <p class="shipping-text">Faltam <strong>{{ remainingAmountFormatted }}</strong> para o frete grátis</p>
+          {% else %}
+          <p class="shipping-text">Você ganhou <strong>frete grátis</strong></p>
+        {% endif %}
+       
       </div>
       <cart-drawer-items
         {% if cart == empty %}
