@@ -11,6 +11,10 @@
   "current": {
     "logo": "shopify://shop_images/Frame_1000006252.svg",
     "logo_width": 70,
+    "discount_code": "PrimeiraCompra",
+    "timer_hours": 65,
+    "timer_minutes": 30,
+    "timer_seconds": 50,
     "type_header_font": "karla_n4",
     "heading_scale": 100,
     "type_body_font": "karla_n4",
