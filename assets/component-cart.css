@@ -220,3 +220,24 @@ cart-items {
     gap: 1rem;
   }
 }
+.cart__ctas {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .cart__checkout-button {
+    background-color: #FF4375;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 32px;
+    font-size: 14px;
+  }
+  .keep-buying {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: #222B3A;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
