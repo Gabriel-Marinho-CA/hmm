@@ -78,6 +78,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__heading {
   margin: 0 0 1rem;
+  font-weight: 600;
 }
 
 .drawer__close {
@@ -100,8 +101,8 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__close .svg-wrapper {
-  height: 2rem;
-  width: 2rem;
+  height: 12px;
+  width: 12px;
 }
 
 .drawer__contents {
@@ -231,6 +232,13 @@ cart-drawer-items {
 .cart-drawer .cart-items thead th:nth-child(2) {
   width: 50%;
   padding-left: 0;
+  padding-bottom:  0.5rem;
+}
+#CartDrawer-ColumnTotal {
+  padding-bottom: 0.5rem;
+}
+#CartDrawer-Remove-1 {
+  margin-left: auto;
 }
 
 .cart-drawer .cart-items thead tr {
