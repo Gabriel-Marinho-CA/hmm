@@ -167,3 +167,7 @@ quantity-popover .quantity__input:not(:focus-visible):not(.focused) {
   background-color: initial;
   height: 35px;
 }
+
+cart-remove-button {
+  margin-left: auto !important;
+}
