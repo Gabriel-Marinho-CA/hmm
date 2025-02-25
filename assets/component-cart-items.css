@@ -142,6 +142,10 @@ cart-remove-button .button {
   margin: 0 0.1rem 0.1rem 0;
 }
 
+cart-remove-button {
+  margin-left: auto;
+}
+
 cart-remove-button .button:before,
 cart-remove-button .button:after {
   content: none;
