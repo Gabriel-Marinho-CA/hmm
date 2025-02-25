@@ -104,7 +104,7 @@
           </span>
         </button>
       </div>
-      {% assign free_shipping_value = 15000 %}
+      {% assign free_shipping_value = 105000 %}
       {% assign calc_shipping_bar = cart.total_price | times: 100 | divided_by: free_shipping_value | round: 2 %}
       {% assign remainingAmount = free_shipping_value | minus: cart.original_total_price %}
       {% if remainingAmount < 0 %}
