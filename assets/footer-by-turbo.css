@@ -242,6 +242,7 @@
     @media (max-width:547px) {
       display: block;
       width: 100%;
+      white-space: pre;
     }
   }
 }
