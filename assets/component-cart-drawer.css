@@ -27,6 +27,10 @@
   flex-direction: column;
   transform: translateX(100%);
   transition: transform var(--duration-default) ease;
+
+  * {
+    font-family: "Plus Jakarta Sans", serif;;
+  }
 }
 
 .drawer__inner-empty {
