@@ -121,6 +121,7 @@
       ],
       "custom_css": [
         "@media (min-width: 1000px) {.collapsible-content-wrapper-narrow {max-width: 780px; padding-inline: 0; }}",
+        "@media (max-width: 999px) {.accordion__title {font-size: 18px; }}",
         ".collapsible-content-wrapper-narrow {padding-inline: 3.5rem;}",
         ".accordion__title {font-size: 26px; font-weight: 700;}",
         ".accordion__content * {color: #4d4d4d; font-size: 20px; line-height: 1.4;}",
