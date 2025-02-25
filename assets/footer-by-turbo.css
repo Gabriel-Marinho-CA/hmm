@@ -241,6 +241,7 @@
 
     @media (max-width:547px) {
       display: block;
+      text-align: center;
       width: 100%;
       white-space: pre;
     }
