@@ -231,6 +231,7 @@ cart-items {
     font-weight: 500;
     border-radius: 32px;
     font-size: 14px;
+    text-transform: uppercase;
     &::before,&::after {
       box-shadow: none !important;
       border: none !important;
@@ -243,6 +244,7 @@ cart-items {
     color: #222B3A;
     font-size: 12px;
     font-weight: 500;
+    text-transform: uppercase;
   }
 }
 
