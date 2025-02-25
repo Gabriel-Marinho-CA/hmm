@@ -165,6 +165,16 @@ cart-remove-button .icon-remove {
 .quantity::after {
   height: 35px;
 }
+.quantity {
+  max-width: 111px;
+
+  .quantity__button {
+    width: 30px;
+  }
+}
+#Drawer-quantity-1 {
+  min-width:45px
+}
 
 @media screen and (min-width: 750px) {
   .cart-item .loading__spinner {
