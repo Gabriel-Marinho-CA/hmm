@@ -56,6 +56,10 @@
 
     .right {
         position:relative;
+        @media (max-width:786px) {
+          max-width: 400px;
+          margin-inline: auto;
+        }
     }
     .hgl-text {
         padding: 1rem;
@@ -70,22 +74,43 @@
         align-items: center;
         border: 2px solid {{ section.settings.strong_color }};
 
+        @media (max-width:786px) {
+          height: auto;
+          border-radius: 14px;
+        }
         * {
             color: {{ section.settings.strong_color }};
             font-size: 22px;
             font-weight: 600;
+
+            @media (max-width:786px) {
+              font-size:13px;
+            }
         }
 
       &.bottom-left {
         max-width: 265px;
         bottom: 15%;
         left: -90px;
+
+        @media (max-width:786px) {
+          max-width: 168px;
+          bottom: 6%;
+          left: -4px;
+        }
       }
 
       &.top-left {
         top: 37%;
         left: -22px;
         max-width: 228px;
+
+        @media (max-width:786px) {
+          top: 32%;
+          left: -6px;
+          max-width: 141px;
+        }
+
       }
 
       &.bottom-right {
@@ -94,12 +119,23 @@
         top: 50%;
         text-align: start;
         padding-inline: 1.5rem;
+
+        @media (max-width:786px) {
+          max-width: 86px;
+          right: 39px;
+          top: 50%;
+        }
       }
       &.top-right {
         right: 23px;
         top: 12%;
         max-width: 168px;
         text-align: start;
+        @media (max-width:786px) {
+          right: 27px;
+          top: 15%;
+          max-width: 106px;
+        }
       }
 
     }
@@ -112,12 +148,29 @@
             top: 14%;
             left: 24%;
 
+            @media (max-width:768px) {
+              top: 10%;
+              left: 23%;
+
+            img {
+              height: auto;
+        max-width: 55px;
+            }
+            }
+
         }
 
         .icon-bottom-right-pdp {
             position: absolute;
             bottom: 0;
             right: 0;
+            @media (max-width:768px) {
+
+            img {
+              max-width: 80px;
+              height: auto;
+            }
+            }
         }
     }
 
