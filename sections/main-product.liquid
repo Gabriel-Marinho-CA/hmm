@@ -39,6 +39,12 @@
         position: relative;
       }
     }
+    @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
   {%- endstyle -%}
 
   <style>
