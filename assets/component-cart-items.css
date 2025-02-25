@@ -18,9 +18,17 @@ cart-items .title-wrapper-with-link {
 .cart-item__quantity-wrapper {
   display: flex;
 }
+.cart-item {
+  border-bottom: 1px solid #E4E4E4;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
 
 .cart-item__totals {
   position: relative;
+  width: max-content;
 }
 
 .cart-items *.right {
