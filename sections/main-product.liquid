@@ -794,6 +794,21 @@
       {{ product | structured_data }}
     </script>
   </div>
+
+  <div class="float-buy-btn">
+    {%- render 'buy-buttons',
+    product: product,
+    product_form_id: product_form_id,
+    section_id: section.id,
+    show_pickup_availability: true,
+    installments_text: section.settings.installments_text,
+    installment_icon: section.settings.installment_icon,
+    safe_text: section.settings.safe_text,
+    safe_icon: section.settings.safe_icon,
+    pix_percent: section.settings.pix_percent,
+    pix_text: section.settings.pix_text
+  -%}
+  </div>
 </product-info>
 
 {% schema %}
