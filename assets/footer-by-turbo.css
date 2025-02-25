@@ -211,6 +211,7 @@
   justify-content: space-between;
 
   @media (max-width: 547px) {
+    display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
     padding-top: 1rem;
@@ -237,5 +238,9 @@
     text-decoration-skip-ink: none;
     text-decoration: none;
     color: #000;
+
+    @media (max-width:547px) {
+      display: block;
+    }
   }
 }
