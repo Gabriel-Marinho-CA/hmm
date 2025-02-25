@@ -76,6 +76,7 @@
       }
     }
     .float-buy-btn {
+
       display: none;
       width: 100%;
       position: fixed;
@@ -83,6 +84,9 @@
       padding:1rem;
       background-color:#fff ;
       z-index: 3;
+      @media (min-width:600px) {
+        display:none !important;
+      }
       &.active {
       display: block;
     }
