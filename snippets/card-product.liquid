@@ -16,7 +16,6 @@
       body: JSON.stringify(formData),
     })
       .then((response) => {
-        console.log("hmm")
         window.location.href = '{{ routes.cart_url }}';
       })
       .catch((error) => {
@@ -25,30 +24,35 @@
   }
 </script>
 <style>
-
   .buy-btn-card-product {
     margin-top: 1.5rem;
     position: relative;
-    height:56px;
+    height: 56px;
     display: flex;
     justify-content: center;
     button {
-      top:0;
+      top: 0;
       position: absolute;
-      z-index:3;
+      z-index: 3;
       border: none;
       height: 56px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       max-width: 300px;
       border-radius: 32px;
       background-color: #ff4375;
       color: #ffff;
-      font-size:16px;
+      font-size: 16px;
       font-weight: 600;
       cursor: pointer;
+    }
+  }
+  .product-card-wrapper {
+    .card__inner,
+    .card__inner img {
+      border-radius: 32px;
     }
   }
 </style>
