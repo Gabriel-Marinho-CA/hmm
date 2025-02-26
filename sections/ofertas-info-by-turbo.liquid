@@ -12,11 +12,12 @@
   }
 {% endstyle %}
 <style>
-  .deals-bar.deals-{{ section.id }} {
+  .deals-bar-fixed.deals-{{ section.id }} {
     width: 100%;
     background-color: #fff;
     box-shadow: 0px -4px 8px 0px #00000014;
     display: none;
+
 
     @media (min-width: 800px) {
       &.desktop {
@@ -24,6 +25,12 @@
       }
     }
     @media (max-width: 799px) {
+      
+    visibility:hidden;
+
+    &.active {
+      visibility:visible;
+    }
       &.mobile {
         display: block !important;
         position: initial !important;
@@ -88,7 +95,7 @@
 </style>
 
 <div
-  class="deals-bar deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}"
+  class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}"
   {% if section.settings.deal_bar_active %}
     data-sticky="true"
   {% endif %}
@@ -123,6 +130,28 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fixed_deal_bar = document.querySelector('.deals-bar-fixed');
+    const targetElement = document.querySelector('.extra-footer-copy');
+
+    if (!targetElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          fixed_deal_bar.classList.remove('active');
+        } else {
+          fixed_deal_bar.classList.add('active');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(targetElement);
+  });
+</script>
 
 {% schema %}
 {
