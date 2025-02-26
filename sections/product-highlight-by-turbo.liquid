@@ -332,15 +332,15 @@
         <div class="image">
           {% if section.settings.product_image != blank %}
             <div class="wrapper-pdp-image">
-              {{ section.settings.product_image | image_url: width: 600, height: 600 | image_tag }}
+              {{ section.settings.product_image | image_url: width: section.settings.product_image.width, height: section.settings.product_image.height | image_tag }}
             </div>
           {% endif %}
 
-          {% if section.settings.icon_bottom_right_product != blank %}
+          /* {% if section.settings.icon_bottom_right_product != blank %}
             <div class="icon-bottom-right-pdp">
               {{ section.settings.icon_bottom_right_product | image_url: width: 120, height: 140 | image_tag }}
             </div>
-          {% endif %}
+          {% endif %} */
         </div>
       </div>
       <div class="buy-btn-hgl mobile">
