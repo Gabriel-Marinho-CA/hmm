@@ -195,6 +195,10 @@
       position: absolute;
       top:0;
       left:0;
+      img  {
+        max-width:70px;
+        height:auto;
+      }
       @media (max-width:768px) {
               display:none;
             }
@@ -293,7 +297,7 @@
     <div class="wrapper">
       <div class="icon-top-left">
         {% if section.settings.icon_top_left != blank %}
-          {{ section.settings.icon_top_left | image_url: width: 60, height: 60 | image_tag }}
+          {{ section.settings.icon_top_left | image_url: width: 90, height: 90 | image_tag }}
         {% endif %}
       </div>
       <div class="left">
