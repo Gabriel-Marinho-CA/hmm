@@ -193,7 +193,7 @@
 
     .icon-top-left {
       position: absolute;
-      top:-5%;
+      top:-3%;
       left:-5%;
       img  {
         max-width:70px;
@@ -317,7 +317,7 @@
         </div>
       </div>
       <div class="right">
-        <div class="bottom-left hgl-text">
+        /* <div class="bottom-left hgl-text">
           {{ section.settings.bottom_left }}
         </div>
         <div class="top-left hgl-text">
@@ -328,13 +328,8 @@
         </div>
         <div class="top-right hgl-text">
           {{ section.settings.top_right }}
-        </div>
+        </div> */
         <div class="image">
-          {% if section.settings.icon_top_left_product != blank %}
-            <div class="icon-top-left-pdp">
-              {{ section.settings.icon_top_left_product | image_url: width: 77, height: 77 | image_tag }}
-            </div>
-          {% endif %}
           {% if section.settings.product_image != blank %}
             <div class="wrapper-pdp-image">
               {{ section.settings.product_image | image_url: width: 600, height: 600 | image_tag }}
@@ -460,11 +455,6 @@
       "type": "image_picker",
       "id": "icon_top_left",
       "label": "Icone cima esquerda"
-    },
-    {
-      "type": "image_picker",
-      "id": "icon_top_left_product",
-      "label": "Icone cima esquerda produto"
     },
     {
       "type": "image_picker",
