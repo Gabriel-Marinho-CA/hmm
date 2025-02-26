@@ -17,6 +17,19 @@
   .product-highlight.section-{{ section.id }}-padding {
     background-color:{{ section.settings.bg_color }};
 
+    &::before {
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: -1;
+        content:"";
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
+        background-repeat: round;
+        opacity: .10;
+    }
+
     * {
         line-height: 1;
         color: {{ section.settings.text_color }};
