@@ -25,11 +25,14 @@
       }
     }
     @media (max-width: 799px) {
-      
+
     visibility:hidden;
 
     &.active {
       visibility:visible;
+    }
+    &.mobile.sticky-mobile {
+      position: fixed !important;
     }
       &.mobile {
         display: block !important;
@@ -94,8 +97,9 @@
   }
 </style>
 
+
 <div
-  class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}"
+  class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}{% if section.settings.deal_bar_sticky_mobile %}sticky-mobile{% endif %}"
   {% if section.settings.deal_bar_active %}
     data-sticky="true"
   {% endif %}
@@ -167,6 +171,12 @@
       "type": "checkbox",
       "label": "Ativar sticky",
       "id": "deal_bar_active",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "label": "Ativar sticky no mobile",
+      "id": "deal_bar_sticky_mobile",
       "default": true
     },
     {
