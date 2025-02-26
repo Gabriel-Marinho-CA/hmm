@@ -100,7 +100,7 @@
 
 
 <div
-  class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}{% if section.settings.deal_bar_sticky_mobile %}sticky-mobile{% endif %}"
+  class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}{% if section.settings.deal_bar_sticky_mobile %} sticky-mobile{% endif %}"
   {% if section.settings.deal_bar_active %}
     data-sticky="true"
   {% endif %}
