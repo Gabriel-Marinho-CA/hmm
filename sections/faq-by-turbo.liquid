@@ -109,23 +109,23 @@
       }
 
       & .collapsible-content__heading {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 48px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        text-align:center;
-
         * {
             margin:0;
+            font-family:"defante";
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 89.6px;
+            letter-spacing: 0%;
+            text-align: center;
+
+            @media (max-width:1015px) {
+              font-weight: 600;
+              font-size: 32px;
+              line-height: 1;
+            }
+
         }
 
-        @media (max-width:1015px) {
-          margin:0;
-          font-size:32px;
-          line-height: 1;
-        }
       }
 
       & .accordion {
