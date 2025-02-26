@@ -16,7 +16,9 @@
     .video-slider {
       overflow-x:hidden;
     }
-
+    .section-{{ section.id }}-padding {
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.12 | round }}px;
+    }
   }
 
   .testimonials {
