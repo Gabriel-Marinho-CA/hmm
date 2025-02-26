@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="right">
-        /* <div class="bottom-left hgl-text">
+         {% comment %} <div class="bottom-left hgl-text">
           {{ section.settings.bottom_left }}
         </div>
         <div class="top-left hgl-text">
@@ -79,7 +79,7 @@
         </div>
         <div class="top-right hgl-text">
           {{ section.settings.top_right }}
-        </div> */
+        </div>  {% endcomment %}
         <div class="image">
           {% if section.settings.product_image != blank %}
             <div class="wrapper-pdp-image">
@@ -87,11 +87,11 @@
             </div>
           {% endif %}
 
-          /* {% if section.settings.icon_bottom_right_product != blank %}
+         {% comment %} {% if section.settings.icon_bottom_right_product != blank %}
             <div class="icon-bottom-right-pdp">
               {{ section.settings.icon_bottom_right_product | image_url: width: 120, height: 140 | image_tag }}
             </div>
-          {% endif %} */
+          {% endif %}  {% endcomment %}
         </div>
       </div>
       <div class="buy-btn-hgl mobile">
