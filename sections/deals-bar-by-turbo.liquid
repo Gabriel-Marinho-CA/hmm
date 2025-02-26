@@ -16,7 +16,12 @@
     & .wrapper-deals {
       background:{{ main.background_section_color  }};
       padding: 24px 0;
+
+      @media (max-width:768px) {
+          padding:12px 0;
+      }
     }
+
 
     & .deal-slide {
       width:fit-content;
@@ -53,7 +58,7 @@
 
         @media (max-width:1000px) {
           img {
-            max-width:35px;
+            max-width:25px;
             height: auto;
           }
         }
