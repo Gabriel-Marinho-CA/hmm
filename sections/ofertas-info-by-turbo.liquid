@@ -17,7 +17,11 @@
     background-color: #fff;
     box-shadow: 0px -4px 8px 0px #00000014;
     display: none;
-
+    visibility:hidden;
+    
+    &.active {
+      visibility:visible;
+    }
 
     @media (min-width: 800px) {
       &.desktop {
@@ -26,11 +30,8 @@
     }
     @media (max-width: 799px) {
 
-    visibility:hidden;
 
-    &.active {
-      visibility:visible;
-    }
+
     &.mobile.sticky-mobile {
       position: fixed !important;
       display: block !important;
