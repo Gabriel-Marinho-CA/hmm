@@ -24,6 +24,7 @@
 {%- endif -%}
 
 {%- style -%}
+
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
@@ -47,6 +48,21 @@
 {%- endstyle -%}
 
 <style>
+  .section:has(#Banner-{{ section.id }}.active_concav) {
+    position:relative;
+
+    &::after {
+      content:"";
+      background-color: {{ section.settings.bg_concav_color }};
+      position: absolute;
+      bottom: -3%;
+      width: 100%;
+      height: 10%;
+      border-radius: 50% 50% 0 0;
+    }
+  }
+  
+
   .custom-banner-image-turbo {
     @media (max-width: 766px) {
       .banner__media {
@@ -54,13 +70,12 @@
         background: none;
 
         &::before {
-          display:none !important;
+          display: none !important;
         }
       }
       .banner__content--middle-center {
-        display:none !important;
+        display: none !important;
       }
-      
     }
   }
   @media (max-width: 766px) {
@@ -97,9 +112,10 @@
   endif
 -%}
 
+
 <div
   id="Banner-{{ section.id }}"
-  class="custom-banner-image-turbo banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="custom-banner-image-turbo {% if section.settings.active_concav %} active_concav{% endif %} banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -141,7 +157,7 @@
               widths: widths,
               fetchpriority: fetch_priority
           }}
-          {% else %}
+        {% else %}
           {{
             section.settings.image
             | image_url: width: 3840
@@ -253,6 +269,18 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "color",
+      "id": "bg_concav_color",
+      "default": "#A65AE6",
+      "label": "Cor de preenchimento"
+    },
+    {
+      "type": "checkbox",
+      "id": "active_concav",
+      "label":"Ativar preenchimento",
+      "default": false
     },
     {
       "type": "image_picker",
