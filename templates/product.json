@@ -203,7 +203,6 @@
         "top_right": "<p>Acelerar el crecimiento </p>",
         "bg_image": "shopify://shop_images/elemento_movimento.png",
         "icon_top_left": "shopify://shop_images/Group_40082.png",
-        "icon_bottom_right_product": "shopify://shop_images/Group_40117.png",
         "product_image": "shopify://shop_images/img_produto_desktop.png",
         "padding_top": 36,
         "padding_bottom": 36
@@ -402,6 +401,8 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_1261153344.png",
+        "bg_concav_color": "#A65AE6",
+        "active_concav": true,
         "image_mobile": "shopify://shop_images/Frame_1261153341.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
