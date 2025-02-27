@@ -139,23 +139,23 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const fixed_deal_bar = document.querySelector('.deals-bar-fixed');
-    const targetElement = document.querySelector('.extra-footer-copy');
+    // const fixed_deal_bar = document.querySelector('.deals-bar-fixed');
+    // const targetElement = document.querySelector('.extra-footer-copy');
 
-    if (!targetElement) return;
+    // if (!targetElement) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          fixed_deal_bar.classList.remove('active');
-        } else {
-          fixed_deal_bar.classList.add('active');
-        }
-      },
-      { threshold: 0.1 }
-    );
+    // const observer = new IntersectionObserver(
+    //   ([entry]) => {
+    //     if (entry.isIntersecting) {
+    //       fixed_deal_bar.classList.remove('active');
+    //     } else {
+    //       fixed_deal_bar.classList.add('active');
+    //     }
+    //   },
+    //   { threshold: 0.1 }
+    // );
 
-    observer.observe(targetElement);
+    // observer.observe(targetElement);
   });
 </script>
 
