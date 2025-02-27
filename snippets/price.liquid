@@ -104,14 +104,14 @@
           </span>
         {%- endunless -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-        <span class="price-item price-item--sale price-item--last">
+        <span class="price-item price-item--sale price-item--last spot-price">
           {{ money_price }}
         </span>
       </div>
       <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-        {% comment %} <span class="price-item price-item--last">
-          <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
+        <span class="price-item price-item--last">
+          <span class="spot-price">{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
           <span aria-hidden="true">/</span>
           <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
           <span>
@@ -120,7 +120,7 @@
             {%- endif -%}
             {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
           </span>
-        </span> {% endcomment %}
+        </span>
       </small>
     </div>
     {%- if show_badges -%}
@@ -134,3 +134,12 @@
     {%- endif -%}
   </div>
 {% endunless %}
+
+<script>
+  document.addEventListener("DOMContentLoaded",function() {
+    document.querySelectorAll(".spot-price").forEach((el) => {
+      const elementText = el.innerHTML.replace("De","");
+      el.innerHTML = elementText;
+    })
+  })
+</script>
