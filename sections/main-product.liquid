@@ -48,6 +48,17 @@
   {%- endstyle -%}
 
   <style>
+    .jdgm-prev-badge__stars {
+      .jdgm-prev-badge__text {
+        text-decoration: none;
+        &::before {
+          content: '(';
+        }
+        &::after {
+          content: ')';
+        }
+      }
+    }
     .product__modal-opener {
       background: #f8f8fa;
       border-radius: 32px;
@@ -114,7 +125,7 @@
       }
 
       button {
-        height:48px;
+        height: 48px;
         border-radius: 12px;
       }
     }
