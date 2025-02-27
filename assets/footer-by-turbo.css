@@ -245,6 +245,7 @@
       align-items: center;
       text-align: center;
       width: 100%;
+      gap: .25rem;
     }
   }
 }
