@@ -887,6 +887,23 @@
     );
 
     observer.observe(targetElement);
+
+    const targetElement2 = document.querySelector('.extra-footer-copy');
+
+    if (!targetElement2) return;
+
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          float_buy_btn.classList.remove('active');
+        } else {
+          float_buy_btn.classList.add('active');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer2.observe(targetElement2);
   });
 </script>
 {% schema %}
