@@ -142,7 +142,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "quick_add": "none",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -154,6 +154,8 @@
       "type": "image-banner",
       "settings": {
         "image": "shopify://shop_images/Frame_1261153344.png",
+        "bg_concav_color": "#A65AE6",
+        "active_concav": false,
         "image_mobile": "shopify://shop_images/Frame_1261153341.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
@@ -193,7 +195,7 @@
         ".rich-text__blocks {display: flex; align-items: center; max-width: 100%; gap: 3rem;}",
         ".rich-text__heading {font-size: 56px; letter-spacing: 1.12px; color: #272727; line-height: 1; font-family: \"defante\";}",
         ".rich-text__text * {font-size: 28px; color: #242323; line-height: 1;}",
-        "@media (max-width: 766px) {.rich-text__blocks {flex-direction: column; text-align: center; gap: 0; } .rich-text__text {margin-top:.88rem; } .rich-text__heading {font-size: 28px; } .rich-text__text * {font-size: 18px; }}"
+        "@media (max-width: 766px) {.rich-text__blocks {flex-direction: column; text-align: center; gap: 0; } .rich-text__text {margin-top: 0.88rem; } .rich-text__heading {font-size: 28px; } .rich-text__text * {font-size: 18px; }}"
       ],
       "settings": {
         "desktop_content_position": "left",
