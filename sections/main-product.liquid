@@ -48,16 +48,15 @@
   {%- endstyle -%}
 
   <style>
-    .jdgm-prev-badge__stars {
-      .jdgm-prev-badge__text {
-        text-decoration: none;
-        &:before {
-          content: '(';
-        }
-        &:after {
-          content: ')';
-        }
-      }
+    .jdgm-prev-badge__text {
+      text-decoration: none;
+
+    }
+    .jdgm-prev-badge__text:before {
+      content: '(';
+    }
+    .jdgm-prev-badge__text:after {
+      content: ')';
     }
     .product__modal-opener {
       background: #f8f8fa;
