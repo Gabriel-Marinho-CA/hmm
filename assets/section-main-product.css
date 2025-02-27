@@ -292,7 +292,7 @@ a.product__text {
     /* margin-bottom: 4rem; */
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 400px) {
     margin-bottom: 0;
   }
 }
@@ -2077,7 +2077,7 @@ media-gallery {
     /* margin-bottom: 4rem; */
     float: left;
   }
-  @media (max-width: 350px) {
+  @media (max-width: 400px) {
     margin-top: 0;
     float: left;
     /* margin-bottom: 4rem; */
