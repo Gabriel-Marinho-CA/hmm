@@ -117,20 +117,23 @@
         {% assign remainingAmountFormatted = remainingAmount | money %}
       {% endif %}
 
-      <div class="shipping-bar-drawer">
-        <div class="bar">
-          <div
-            class="inner-bar"
-            style="width:{{ calc_shipping_bar }}%"
-          ></div>
+      {%- if cart != empty -%}
+        <div class="shipping-bar-drawer">
+          <div class="bar">
+            <div
+              class="inner-bar"
+              style="width:{{ calc_shipping_bar }}%"
+            ></div>
+          </div>
+          {% if remainingAmount > 1 %}
+            <p class="shipping-text">Faltam <strong>{{ remainingAmountFormatted }}</strong> para o frete grátis</p>
+            {% else %}
+            <p class="shipping-text">Você ganhou <strong>frete grátis</strong></p>
+          {% endif %}
+         
         </div>
-        {% if remainingAmount > 1 %}
-          <p class="shipping-text">Faltam <strong>{{ remainingAmountFormatted }}</strong> para o frete grátis</p>
-          {% else %}
-          <p class="shipping-text">Você ganhou <strong>frete grátis</strong></p>
-        {% endif %}
-       
-      </div>
+      {% endif %}
+     
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"
