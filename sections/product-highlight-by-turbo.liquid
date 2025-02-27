@@ -82,30 +82,63 @@
         </div>
       </div>
       <div class="right">
-         {% comment %} <div class="bottom-left hgl-text">
-          {{ section.settings.bottom_left }}
-        </div>
-        <div class="top-left hgl-text">
-          {{ section.settings.top_left }}
-        </div>
-        <div class="bottom-right hgl-text">
-          {{ section.settings.bottom_right }}
-        </div>
-        <div class="top-right hgl-text">
-          {{ section.settings.top_right }}
-        </div>  {% endcomment %}
+        {% comment %}
+          <div class="bottom-left hgl-text">
+            {{ section.settings.bottom_left }}
+          </div>
+          <div class="top-left hgl-text">
+            {{ section.settings.top_left }}
+          </div>
+          <div class="bottom-right hgl-text">
+            {{ section.settings.bottom_right }}
+          </div>
+          <div class="top-right hgl-text">
+            {{ section.settings.top_right }}
+          </div>
+        {% endcomment %}
         <div class="image">
           {% if section.settings.product_image != blank %}
             <div class="wrapper-pdp-image">
-              {{ section.settings.product_image | image_url: width: section.settings.product_image.width, height: section.settings.product_image.height | image_tag }}
+              <div class="desktop">
+                {% if section.settings.product_image != blank %}
+                  {{
+                    section.settings.product_image
+                    | image_url:
+                      width: section.settings.product_image.width,
+                      height: section.settings.product_image.height
+                    | image_tag
+                  }}
+                {% endif %}
+              </div>
+              <div class="mobile">
+                {% if section.settings.product_image_mobile == blank and section.settings.product_image != blank %}
+                  {{
+                    section.settings.product_image
+                    | image_url:
+                      width: section.settings.product_image.width,
+                      height: section.settings.product_image.height
+                    | image_tag
+                  }}
+                {% else %}
+                  {{
+                    section.settings.product_image_mobile
+                    | image_url:
+                      width: section.settings.product_image_mobile.width,
+                      height: section.settings.product_image_mobile.height
+                    | image_tag
+                  }}
+                {% endif %}
+              </div>
             </div>
           {% endif %}
 
-         {% comment %} {% if section.settings.icon_bottom_right_product != blank %}
-            <div class="icon-bottom-right-pdp">
-              {{ section.settings.icon_bottom_right_product | image_url: width: 120, height: 140 | image_tag }}
-            </div>
-          {% endif %}  {% endcomment %}
+          {% comment %}
+            {% if section.settings.icon_bottom_right_product != blank %}
+              <div class="icon-bottom-right-pdp">
+                {{ section.settings.icon_bottom_right_product | image_url: width: 120, height: 140 | image_tag }}
+              </div>
+            {% endif %}
+          {% endcomment %}
         </div>
       </div>
       <div class="buy-btn-hgl mobile">
@@ -225,6 +258,11 @@
       "type": "image_picker",
       "id": "product_image",
       "label": "Imagem do produto"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image_mobile",
+      "label": "Imagem do produto mobile"
     },
     {
       "type": "header",

@@ -35,6 +35,23 @@
       margin-inline: auto;
     }
   }
+  .wrapper-pdp-image {
+    .mobile,
+    .desktop {
+      display: none;
+    }
+
+    @media (min-width:769px) {
+      .desktop {
+        display: block !important;
+      }
+    }
+    @media (max-width:768px) {
+      .mobile {
+        display: block !important;
+      }
+    }
+  }
   @media (max-width: 768px) {
     .wrapper-pdp-image {
       img {
