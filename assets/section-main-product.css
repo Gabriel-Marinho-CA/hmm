@@ -2082,3 +2082,14 @@ media-gallery {
     /* margin-bottom: 4rem; */
   }
 }
+.jdgm-prev-badge__stars {
+  .jdgm-prev-badge__text {
+    text-decoration: none;
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }
+  }
+}
