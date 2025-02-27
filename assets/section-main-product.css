@@ -2060,3 +2060,25 @@ media-gallery {
   display: inline-block;
   margin-left: 0.3rem;
 }
+
+.jdgm-rev-widg__summary {
+  padding-right: 1rem;
+}
+.shopify-block:has(.jdgm-preview-badge.jdgm-preview-badge--with-link) {
+  float: right;
+  margin-top: 2rem;
+  height: 36px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 750px) {
+    margin-top: 0rem;
+    /* margin-bottom: 4rem; */
+    float: left;
+  }
+  @media (max-width: 350px) {
+    margin-top: 0;
+    float: left;
+    /* margin-bottom: 4rem; */
+  }
+}
