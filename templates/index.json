@@ -153,10 +153,10 @@
     "image_banner_Gk8aLd": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/Frame_1261153344.png",
-        "bg_concav_color": "#A65AE6",
+        "image": "shopify://shop_images/12.png",
+        "bg_concav_color": "#a65ae6",
         "active_concav": false,
-        "image_mobile": "shopify://shop_images/Frame_1261153341.png",
+        "image_mobile": "shopify://shop_images/13.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
